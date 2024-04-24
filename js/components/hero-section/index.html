@@ -1,0 +1,53 @@
+<section class="p-3" style="margin-top: 45px;">
+    <section id="hero" class="container-fluid rounded bg-j-dark bg-hero p-3">
+        <div class="row align-items-end justify-content-between">
+            <div class="col-12 col-md-8 col-lg-6">
+                <aside class="d-flex flex-column justify-content-end gap-2 text-light" style="height: 50vh;">
+                    <div class="img-frame rounded-15 bg-glass"><img src="/assets/logo.png" alt="Jurdi Logo" class="img-fluid" width="50"></div>
+                    <h1 class="font-title fs-4">Welcome to <br>Jurdi Media Production Consultants</h1>
+                    <p class="font-normal fs-small text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos fugiat et quam adipisci, laudantium atque rerum, corrupti harum omnis nesciunt, molestiae quae sunt quod? Vitae ullam ad corporis doloribus.</p>
+                    <div class="container">
+                        <div class="row d-flex align-items-center gap-2 fs-smaller">
+                            <span class="col-12 col-lg-4 bg-glass-dark px-3 py-1 rounded font-normal d-flex justify-content-lg-center align-items-center gap-2">
+                                <span class="material-symbols-outlined-none">video_call</span>
+                                <span>Schedule a Meeting</span>
+                            </span>
+                            <!-- <span class="col-12 col-lg-4 bg-glass-dark px-3 py-1 rounded font-normal d-flex justify-content-lg-center align-items-center gap-2">
+                                <span class="material-symbols-outlined-none">send</span>
+                                <span>Send a Message</span>
+                            </span> -->
+                            <span @click="applyBackground()"  class="col-12 col-lg-4 bg-glass-dark px-3 py-1 rounded font-normal d-flex justify-content-lg-center align-items-center gap-2">
+                                <span class="material-symbols-outlined-none">upload</span>
+                                <span>Upload background</span>
+                            </span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="d-none d-md-block col-1">
+                <aside class="d-flex flex-column align-items-end gap-1 text-light">
+                    <span role="button" @click="utilities.shareBy(location.pathname,location.href)" title="Share this page." class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-share"></i></span>
+                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-whatsapp"></i></span>
+                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-linkedin"></i></span>
+                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-instagram"></i></span>
+                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-envelope"></i></span>
+                    <!-- <span @click="applyBackground()" role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-upload"></i></span> -->
+                    
+                    <!-- <div class="dropup dropup-center">
+                        <span role="button" data-bs-toggle="dropdown" class="dropdown-toggle bg-glass px-3 py-1 rounded font-normal d-flex align-items-center justify-content-between gap-1">
+                            <span title="Connect with us on social media platforms." >Social Media</span>
+                            <ul class="dropdown-menu bg-glass">
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-whatsapp"></i> Whatsapp</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope"></i> Email</a></li>
+                            </ul>
+                        </span>
+                    </div> -->
+
+                </aside>
+            </div>
+        </div>
+
+    </section>
+</section>

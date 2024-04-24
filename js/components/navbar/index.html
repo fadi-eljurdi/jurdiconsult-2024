@@ -1,0 +1,38 @@
+<section id="navbar" style="transition: .5s;" :class="'position-fixed bg-light shadow-sm border-bottom top-0 start-0 z-2 w-100 p-2 px-3 d-flex justify-content-between align-items-center'">
+    <section class="d-flex align-items-center gap-2">
+        <img src="/assets/logo.png" alt="Jurdi logo" class="img-fluid" width="24">
+        <strong class="font-title">Media Production Consultants</strong> 
+    </section>
+    
+    <section class="d-none d-lg-flex align-items-center gap-5 font-title">
+        <nav class="d-flex align-items-center gap-3">
+            <a aria-label="Home" href="/" class="navbar-link-active">Home</a>
+            <a aria-label="Services" href="/services/" class="navbar-link">Services</a>
+            <a aria-label="Policies" href="/docs/" class="navbar-link">Policies & Terms of use</a>
+            <a aria-label="Blogs" href="/blogs/" class="navbar-link">News & Insights</a>
+        </nav>
+    </section>
+    <a href="/contact/" class="d-none d-lg-block btn-action">Contact</a>
+    <i class="d-block d-lg-none bi bi-list fs-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"></i>
+</section>
+<aside class="offcanvas offcanvas-end" id="sidebar">
+    <div class="offcanvas-header">
+        <div class=""></div>
+        <i class="bi bi-arrow-return-right fs-3" data-bs-dismiss="offcanvas" aria-label="Close" role="button"></i>
+    </div>
+    <div class="offcanvas-body">
+        <aside class="d-flex flex-column gap-2 align-items-center">
+            <div class="d-flex flex-column">
+                <img src="/assets/logo.png" alt="Jurdi logo" class="img-fluid mx-auto mb-3" width="50">
+                <!-- <h5 class="font-title text-justify my-2">Jurdi Media Production Consultants</h5>
+                <p class="fs-small text-justify font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laboriosam, quae iste officiis rerum fuga!</p>     -->
+            </div>
+            <hr>
+            <a aria-label="Home" href="/" class="w-100 btn btn-outline-dark">Home Page</a>
+            <a aria-label="Services" href="/services/" class="w-100 btn btn-outline-dark">Services</a>
+            <a href="/blogs/" class="w-100 btn btn-outline-dark">News & Insights</a>
+            <a aria-label="Policies" href="/docs/" class="w-100 btn btn-outline-dark">Privacy & Terms of use</a>
+            <a aria-label="Blogs" href="/contact/" class="w-100 btn-action">Contact</a>
+        </aside>
+    </div>
+</aside>
