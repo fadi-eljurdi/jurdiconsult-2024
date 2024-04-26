@@ -244,7 +244,7 @@
                                                           <div :id="node" class="accordion-collapse collapse" data-bs-parent="#symbolsAcc">
                                                             <div class="accordion-body">
                                                                 <section class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
-                                                                    <span @click="utilities.copi(pod.hex)" data-bs-dismiss="modal" v-for="pod in utilities.getSymbols(node)" class="fs-6 btn btn-sm btn-outline-dark">
+                                                                    <span :title="pod.name" @click="utilities.copi(pod.hex)" data-bs-dismiss="modal" v-for="pod in utilities.getSymbols(node)" class="fs-6 btn btn-sm btn-outline-dark">
                                                                         <span v-html="pod.hex"></span>
                                                                     </span>
                                                                 </section>

@@ -7,7 +7,7 @@ export default {
     password: '',
     isLogedIn: false,
     geminiToken: '',
-    api: 'https://script.google.com/macros/s/AKfycbyGJq2iVwVJ4wV_sp_eirRD0fJGUs_7bJ_lTWJRRnxBiq0ge7OmHhKKbuKohQfQa3p-/exec',
+    api: 'https://script.google.com/macros/s/AKfycbyjhwUTaaJR2-TiiQGsBaSQ5DNUPfg5p8prWH4Vt0I1v5xVW5ocYhuKL4HUpzCRuIg_/exec',
 
     spinner: false,
     services: [],

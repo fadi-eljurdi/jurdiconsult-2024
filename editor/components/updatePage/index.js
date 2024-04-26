@@ -125,6 +125,7 @@ var app = {
                 return text
             } catch (err) {
 
+                this.spinner = false
                 console.log(err);
                 notify.alert(`Please inform Mahmoud about this error = ${err}`)
             }
@@ -229,6 +230,7 @@ var app = {
                 }
             } catch (err) {
 
+                this.spinner = false
                 console.log(err);
                 notify.alert(`Please inform Mahmoud about this error = ${err}`)
             }
@@ -241,7 +243,8 @@ var app = {
                 theme: 'snow',
                 modules: {
                     toolbar: [
-                        // [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                        
+                        [{ 'header': [1, 2, 3, false] }],
                         ['bold', 'italic', 'underline', 'strike', 'clean', 'link', { 'direction': 'rtl' }, 'code-block', 'blockquote'],
                     ],
                 },
