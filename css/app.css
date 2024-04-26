@@ -709,6 +709,14 @@ a {
     color: var(--j-dark);
     text-align: justify;
 }
+.article-container>.article-body>.article-aside>p>a{
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+    
+    word-wrap: break-word;
+    
+}
 
 .form-control:focus {
     outline: none !important;
