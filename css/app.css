@@ -137,7 +137,6 @@ a {
     background-size: 1em 1em;
     background-color: transparent;
     opacity: 1
-
 }
 
 .bg-na2she-blocks {
@@ -156,7 +155,7 @@ a {
     -webkit-backdrop-filter: blur(5px);
 }
 
-.bg-grad{
+.bg-grad {
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
@@ -709,13 +708,14 @@ a {
     color: var(--j-dark);
     text-align: justify;
 }
-.article-container>.article-body>.article-aside>p>a{
+
+.article-container>.article-body>.article-aside>p>a {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
-    
+
     word-wrap: break-word;
-    
+
 }
 
 .form-control:focus {
@@ -767,9 +767,15 @@ a {
 }
 
 /* Banner */
-.banner-body{
+.banner-body {
     position: absolute;
     left: 50%;
     bottom: -160px;
     transform: translate(-50%);
+}
+
+.bg-heroic {
+    background: linear-gradient(25deg, #14213d 40%, transparent 41%, transparent 59%, #14213d 60%), linear-gradient(90deg, transparent 45%, #4f46e4 45%, #4f46e4 55%, transparent 55%, transparent 20%, #4f46e4 20%, #4f46e4 30%, transparent 30%);
+    background-size: 1em 1em;
+    background-color: #14213d;
 }
