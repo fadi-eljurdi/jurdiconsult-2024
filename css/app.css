@@ -788,10 +788,10 @@ a {
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  
     background: linear-gradient(to right, #243B55, #141E30);  */
 
-    /* background-image: linear-gradient(60deg, var(--j-black) 0%, #485563 100%); */
+    background-image: linear-gradient(60deg, var(--j-black) 0%, #485563 100%);
     /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
 
-    background-color: var(--j-black);
+    /* background-color: var(--j-black); */
 
     
 }
