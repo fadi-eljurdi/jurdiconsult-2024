@@ -22,6 +22,9 @@ export default {
             var files = await utilities.openFiles()
             var image64 = await utilities.file64(files[0])
             document.getElementById('hero').style.backgroundImage = `url(${image64})`;
+            document.getElementById('hero').style.backgroundRepeat = `no-repeat`;
+            document.getElementById('hero').style.backgroundSize = `cover`;
+            document.getElementById('hero').style.backgroundPosition = `center`;
         }
     }
 }
