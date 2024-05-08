@@ -45,7 +45,7 @@
               <p class="text-j-light fs-smaller font-normal text-fade2 pt-2">We provide comprehensive legal services to empower your business across all its needs.</p>
             </div>
             
-            <nav v-if="store.spinner" class="d-flex flex-column roboto gap-3">
+            <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
               <div class="d-flex align-items-center gap-2" v-for="node in ['','','','','','','','']">
                 <!-- <div class="skeleton rounded-circle" style="width: 1rem; height: 1rem;"></div> -->
                 <span class="material-symbols-outlined text-primary-100">link</span>
@@ -53,7 +53,7 @@
               </div>
             </nav>
             <nav v-else class="d-flex flex-column roboto gap-1">
-                <a :aria-label="node.title"  :href="node.url" class="d-flex align-items-center gap-2" v-for="node in store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO').reverse()">
+                <a :aria-label="node.title"  :href="node.url" class="d-flex align-items-center gap-2" v-for="node in store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO')">
                     <span class="material-symbols-outlined text-primary-100">link</span><span class="opacity-75 w-100">{{node.title}}</span>
                 </a>
             </nav>
@@ -65,7 +65,7 @@
               <h5 class="font-title fs-5 border-tag-bottom w-fit pb-1">News & Insights</h5>
               <p class="text-j-light fs-smaller font-normal text-fade2 pt-2">Explore JURDI & CO's blog for insightful articles on media, technology, IP, and more.</p>
             </div>
-            <nav v-if="store.spinner" class="d-flex flex-column roboto gap-3">
+            <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
               <div class="d-flex align-items-center gap-2" v-for="node in ['','','','','','','','']">
                 <!-- <div class="skeleton rounded-circle" style="width: 1rem; height: 1rem;"></div> -->
                 <span class="material-symbols-outlined text-primary-100">link</span>

@@ -23,13 +23,14 @@
                     <div class="col-12 col-lg-12">
                         <a :href="`mailto:${store.contact.email}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
                             <span class="material-symbols-outlined-none fs-1">send</span>
-                            <h5 class="font-title fs-5 text-j-dark">Email</h5>
-                            <p class="font-normal text-dark fs-small">{{store.contact.email}}</p>
+                            <h5 class="font-title fs-5 text-j-dark">{{store.contact.email}}</h5>
+                            <!-- <p class="font-normal text-dark fs-small">{{store.contact.email}}</p> -->
                         </a>
                     </div>
                     <div class="col-12 col-lg-12">
-                        <a :href="`tel:${store.contact.number}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <span class="material-symbols-outlined-none fs-1">add_call</span>
+                        <a :href="`${store.contact.whatsapp}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
+                            <!-- <span class="material-symbols-outlined-none fs-1">add_call</span> -->
+                            <i class="bi bi-whatsapp fs-2"></i>
                             <h5 class="font-title fs-5 text-j-dark">Whatsapp</h5>
                             <!-- <p class="font-normal text-dark fs-small">{{store.contact.number}}</p> -->
                         </a>
