@@ -81,6 +81,9 @@ app.component('blogs-section', blogsSection)
 import bannerSection from './components/banner-section/index.js'
 app.component('banner-section', bannerSection)
 
+import servicesBannerSection from './components/services-banner-section/index.js'
+app.component('services-banner-section', servicesBannerSection)
+
 import contactSection from './components/contact-section/index.js'
 app.component('contact-section', contactSection)
 

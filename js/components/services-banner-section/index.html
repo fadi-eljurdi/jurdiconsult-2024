@@ -1,0 +1,56 @@
+<section class="py-5">
+    <div class="container-fluid bg-na2she-black d-flex align-items-center justify-content-center" style="height: 70vh;">
+        <div class="row justify-content-center align-items-center g-3">
+            <div class="col-12">
+                <div class="d-flex flex-column gap-2">
+                    <h3 data-aos="zoom-in-up" data-aos-duration="1000" class="text-center">
+                        <span class="font-title text-j-primary">Our Services</span><br>
+                        <!-- <span class="font-handwriting text-j-primary ls-1">Different?</span> -->
+                    </h3>
+                    <p class="text-j-light font-normal fs-small text-center">At Jurdi Production Media Consultants, business follows values. No compromising.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-12">
+                <aside class="d-flex flex-wrap justify-content-center align-items-center gap-2 placeholder-glow">
+                    <span v-if="store.spinner" data-aos-duration="1500" data-aos="fade-left" class="placeholder px-3 py-1 shadow-sm bg-glass text-j-light rounded font-normal d-flex align-items-center gap-2">
+                        
+                        <b style="width: 100px;"></b>
+                        <span class="material-symbols-outlined">navigate_next</span>
+                    </span>
+                    <span v-if="store.spinner" data-aos-duration="1500" data-aos="fade-left" class="placeholder px-3 py-1 shadow-sm bg-glass text-j-light rounded font-normal d-flex align-items-center gap-2">
+                        
+                        <b style="width: 150px;"></b>
+                        <span class="material-symbols-outlined">navigate_next</span>
+                    </span>
+                    <span v-if="store.spinner" data-aos-duration="1500" data-aos="fade-left" class="placeholder px-3 py-1 shadow-sm bg-glass text-j-light rounded font-normal d-flex align-items-center gap-2">
+                        
+                        <b style="width: 200px;"></b>
+                        <span class="material-symbols-outlined">navigate_next</span>
+                    </span>
+                    <span v-if="store.spinner" data-aos-duration="1500" data-aos="fade-left" class="placeholder px-3 py-1 shadow-sm bg-glass text-j-light rounded font-normal d-flex align-items-center gap-2">
+                        
+                        <b style="width: 100px;"></b>
+                        <span class="material-symbols-outlined">navigate_next</span>
+                    </span>
+                    <span v-if="store.spinner" data-aos-duration="1500" data-aos="fade-left" class="placeholder px-3 py-1 shadow-sm bg-glass text-j-light rounded font-normal d-flex align-items-center gap-2">
+                        
+                        <b style="width: 250px;"></b>
+                        <span class="material-symbols-outlined">navigate_next</span>
+                    </span>
+                    <span v-if="store.spinner" data-aos-duration="1500" data-aos="fade-left" class="placeholder px-3 py-1 shadow-sm bg-glass text-j-light rounded font-normal d-flex align-items-center gap-2">
+                        
+                        <b style="width: 150px;"></b>
+                        <span class="material-symbols-outlined">navigate_next</span>
+                    </span>
+                </aside>
+                <aside  v-if="!store.spinner" class="d-flex flex-wrap justify-content-center align-items-center gap-2">
+                    <a data-aos-duration="1500" data-aos="fade-left" :href="node.url" :title="node.description" v-for="node in filteredServices" :key="node" class="px-3 py-1 shadow-sm bg-glass text-j-light rounded font-normal d-flex align-items-center gap-2">
+                        
+                        <b class="fs-small">{{node.title}}</b>
+                        <span class="material-symbols-outlined fs-5">navigate_next</span>
+                    </a>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
