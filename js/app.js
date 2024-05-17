@@ -18,7 +18,7 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        
+
         async getProfile() {
             try {
                 this.store.spinner = true
@@ -40,6 +40,14 @@ const app = Vue.createApp({
             }
 
         },
+        openLink(url) {
+            const width = 600;
+            const height = 400;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+
+            window.open(url, 'popupWindow', `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`);
+        }
     },
     mounted() {
         AOS.init()
@@ -58,6 +66,7 @@ const app = Vue.createApp({
                 document.getElementById('original').classList.add('font-title')
             }
         }
+
 
     }
 })
