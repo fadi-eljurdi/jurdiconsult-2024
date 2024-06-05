@@ -65,6 +65,7 @@
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">Timestamp</th>
+                            <th scope="col">Order</th>
                             <th scope="col">Folder</th>
                             <th scope="col">Thumbnail</th>
                             <th scope="col">Title</th>
@@ -72,6 +73,7 @@
                     </thead>
                     <tbody>
                         <tr v-for="page in filteredPages">
+                            
                             <th scope="row" style="width: 50px;">
                                 <div class="d-flex gap-2" v-if="!spinner">
                                     <span class="material-symbols-outlined text-secondary" data-bs-toggle="dropdown" role="button" aria-label="options">more_horiz</span>
@@ -84,6 +86,7 @@
                                 </div>
                             </th>
                             <td>{{utilities.timo(page.timestamp)}}</td>
+                            <td>{{page.order}}</td>
                             <td>{{page.folder}}</td>
                             <td>
                                 <div class="ratio ratio-16x9"><img :src="page.media.split(',')[0]" :alt="page.title" class="object-fit-cover rounded skeleton shadow-sm"></div>

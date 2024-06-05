@@ -22,31 +22,31 @@ export default {
         filteredPages() {
             if (this.searchInput.trim().toLowerCase() != '') {
                 return [
-                    ...this.store.blogs.reverse().filter(e => e.title.trim().toLowerCase().includes(this.searchInput.trim().toLowerCase())),
-                    ...this.store.services.reverse().filter(e => e.title.trim().toLowerCase().includes(this.searchInput.trim().toLowerCase()))
+                    ...this.store.blogs.filter(e => e.title.trim().toLowerCase().includes(this.searchInput.trim().toLowerCase())),
+                    ...this.store.services.filter(e => e.title.trim().toLowerCase().includes(this.searchInput.trim().toLowerCase()))
                 ]
             }
 
             switch (this.$route.query.tab) {
                 case 'all': {
                     // return [...this.store.blogs.slice(0, 2), ...this.store.services.slice(0, 2)]
-                    return [...this.store.blogs.reverse(), ...this.store.services.reverse()]
+                    return [...this.store.blogs, ...this.store.services]
                 }
                 case 'blogs': {
                     return [
-                        ...this.store.blogs.reverse()
+                        ...this.store.blogs
                     ]
                 }
                 case 'services': {
                     return [
-                        ...this.store.services.reverse()
+                        ...this.store.services
                     ]
                 }
 
                 default: {
                     // return [...this.store.blogs.slice(0, 3), ...this.store.services.slice(0, 3)]
                     
-                    return [...this.store.blogs.reverse(), ...this.store.services.reverse()]
+                    return [...this.store.blogs, ...this.store.services]
                 }
 
             }

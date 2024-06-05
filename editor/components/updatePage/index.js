@@ -50,6 +50,7 @@ var app = {
 
         getUpdatedPayload() {
             try {
+                this.updatedPage.order = `${this.updatedPage.order}`
                 this.updatedPage.article = document.getElementsByClassName('ql-editor').item(0).innerHTML
                 return utilities.diffProperties(this.updatedPage, this.initialPage)
             } catch (err) {
