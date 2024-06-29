@@ -1,7 +1,7 @@
 import Page from './classes/Page.js'
 export default {
     version: '1.1',
-    devmode:false,
+    devmode:true,
     OAuthUser: false,
     username: '',
     password: '',
