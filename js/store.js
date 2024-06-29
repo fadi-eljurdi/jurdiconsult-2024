@@ -1,13 +1,13 @@
 import Page from './classes/Page.js'
 export default {
     version: '1.1',
-    devmode:true,
+    devmode:false,
     OAuthUser: false,
     username: '',
     password: '',
     isLogedIn: false,
     geminiToken: '',
-    api: 'https://script.google.com/macros/s/AKfycbyjhwUTaaJR2-TiiQGsBaSQ5DNUPfg5p8prWH4Vt0I1v5xVW5ocYhuKL4HUpzCRuIg_/exec',
+    api: 'https://script.google.com/macros/s/AKfycbw6sxToQom-x3kG4mac2DNBH7H-BIHicWOoPxkiRYMZgPUR8BzRi_nILY4RFR92zB6Z/exec',
 
     spinner: false,
     services: [],
