@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jurdi Media Consultants</title>
+ 
+    <!-- version 1.2 -->
 
     <!-- SEO Tags -->
     <meta name="title" content="Jurdi Media Consultants">
@@ -37,13 +38,10 @@
 
     <!-- JS -->
     <script src="/js/packages/vue.min.js" defer></script>
-    
-    <!-- version 1.1 -->
-
 
 </head>
 
-<body id="app" class=" bg-na2she" style="overflow-x: hidden !important;">
+<body id="app" class="bg-na2she" style="overflow-x: hidden !important;">
 
     <header>
         <div v-if="store.spinner" class="spinner-line"></div>
@@ -52,12 +50,13 @@
     <hero-section></hero-section>
     <main class="d-flex flex-column gap-5" style="overflow-x: hidden;">
         <services-section></services-section>
-        <!-- <services-banner-section></services-banner-section> -->
+        <founder-section></founder-section>
         <banner-section></banner-section>
         <blogs-section></blogs-section>
         <contact-section ></contact-section>
     </main>
     <footer-section></footer-section>
+
     <!-- JAVASCRIPT -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="./js/app.js"></script>

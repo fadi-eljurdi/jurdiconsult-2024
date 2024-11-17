@@ -1,5 +1,5 @@
 <section class="px-4" style="overflow-x: hidden !important;">
-    <hr class="container my-5" v-if="path == '/' || path == '/index.html' ">
+    <!-- <hr class="container my-5" v-if="path == '/' || path == '/index.html' "> -->
     <div class="container-fluid">
         <div class="row justify-content-center g-3">
             <div class="col-12 col-lg-12">
@@ -56,7 +56,7 @@
                 }">
                     <swiper-slide v-for="node in filteredBlogs" :key="node">
                         <section class="d-flex flex-column shadow-sm rounded-chat">
-                            <div class="p-2 pt-3 bg-glass d-flex flex-column gap-2">
+                            <div class="p-3 pt-3 bg-glass d-flex flex-column gap-2">
                                 <span class="material-symbols-outlined fs-1 text-j-primary">news</span>
                                 <!-- <img :src="node.media" alt="thumbnail" class="object-fit-cover rounded" width="75" height="75"> -->
                                 <div class="d-flex flex-column gap-2">

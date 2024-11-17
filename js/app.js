@@ -96,8 +96,12 @@ app.component('services-banner-section', servicesBannerSection)
 import contactSection from './components/contact-section/index.js'
 app.component('contact-section', contactSection)
 
+import founderSection from './components/founder/index.js'
+app.component('founder-section', founderSection)
+
 import footerSection from './components/footer-section/index.js'
 app.component('footer-section', footerSection)
+
 
 // BLOGS Components
 import spinner from './components/spinner/index.js'

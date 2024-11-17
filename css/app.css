@@ -51,8 +51,8 @@
 /* ELEMENTS */
 :root {
     --j-black: #070707;
-    --j-dark: #14213d;
-    --j-primary: #9AD0EC;
+    --j-dark: #1d4355;
+    --j-primary: #289dd2;
     --j-grey: #8d99ae;
     --j-light: #e5e5e5;
     --j-white: #ffffff;
@@ -136,7 +136,9 @@ a {
     background: linear-gradient(25deg, #ffffff 40%, transparent 41%, transparent 59%, #ffffff 60%), linear-gradient(90deg, transparent 45%, #eae7e7 45%, #eae7e7 55%, transparent 55%, transparent 20%, #eae7e7 20%, #eae7e7 30%, transparent 30%);
     background-size: 1em 1em;
     background-color: transparent;
-    opacity: 1
+    opacity: 1;
+
+    background-attachment: fixed;
 }
 
 .bg-na2she-blocks {
@@ -165,7 +167,7 @@ a {
         background-color: #070707;
         opacity: 1 */
 
-        
+
     background-image: linear-gradient(60deg, var(--j-black) 0%, #485563 100%);
 }
 
@@ -252,6 +254,8 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     /* filter: brightness(0); */
+
+    /* background-attachment: fixed; */
 }
 
 .bg-banner {
@@ -800,7 +804,7 @@ a {
     /* background: #141E30;  
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  
     background: linear-gradient(to right, #243B55, #141E30);  */
-/* 
+    /* 
     background-image: linear-gradient(60deg, var(--j-black) 0%, #485563 100%); */
     /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
 
@@ -809,7 +813,6 @@ a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 
 }
 

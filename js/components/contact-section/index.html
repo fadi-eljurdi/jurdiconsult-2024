@@ -1,64 +1,38 @@
-<section class="p-3">
-    <section class="container-fluid">
-        <div class="row justify-content-center align-items-start g-5">
-            
-            <div class="col-12 col-lg-6">
-                <aside class="d-flex bg-light flex-column gap-2 p-3 shadow-sm rounded">
-                    <input v-model="inputName" type="text" placeholder="Enter your name" class="form-control">
-                    <input v-model="inputSubject" type="text" placeholder="Enter the subject" class="form-control">
-                    <textarea v-model="inputMessage" rows="7" class="form-control" placeholder="Type your message.."></textarea>
-                    <span class="btn-action" @click="sendMessageTo()">Send message</span>
-                    
-                </aside>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="row g-3">
-                    <!-- <div class="col-12">
-                        <div class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <span class="material-symbols-outlined-none fs-1">video_call</span>
-                            <h5 class="font-title fs-5 text-j-dark">Schedule a meeting</h5>
-                            <p class="font-normal text-dark fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, reprehenderit.</p>
-                        </div>
-                    </div> -->
-                    <div class="col-12 col-lg-12">
-                        <div class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <!-- <span class="material-symbols-outlined-none fs-1">add_call</span> -->
-                            <i class="bi bi-geo-alt fs-2"></i>
-                            <h5 class="font-title fs-5 text-j-dark">300 International Dr Suite 100, Buffalo NY 14221</h5>
-                            <!-- <p class="font-normal text-dark fs-small">{{store.contact.number}}</p> -->
-                        </div>
+<section class="container my-5">
+    <div class="row justify-content-center align-items-start g-5">
+        
+        <div class="col-12 col-lg-6">
+            <aside class="h-100 d-flex bg-light flex-column gap-2 p-3 shadow-sm rounded">
+                <input v-model="inputName" type="text" placeholder="Enter your name" class="form-control">
+                <input v-model="inputSubject" type="text" placeholder="Enter the subject" class="form-control">
+                <textarea v-model="inputMessage" rows="7" class="form-control" placeholder="Type your message.."></textarea>
+                <span class="btn-action" @click="sendMessageTo()">Send message</span>
+                
+            </aside>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row g-3">
+                
+                <div class="col-12 col-lg-6">
+                    <a :href="`mailto:${store.contact.email}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column align-items-center gap-2">
+                        <i class="bi bi-envelope fs-2"></i>
+                        <h5 v-if="store.spinner" class="font-title fs-5 text-j-dark">Email</h5>
+                        <h5 v-else class="font-title fs-5 text-j-dark">{{store.contact.email}}</h5>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <a :href="`${store.contact.whatsapp}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column align-items-center gap-2">
+                        <i class="bi bi-whatsapp fs-2"></i>
+                        <h5 class="font-title fs-5 text-j-dark">Whatsapp</h5>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-12">
+                    <div class="p-3 bg-light shadow-sm rounded d-flex flex-column align-items-center gap-2">
+                        <i class="bi bi-geo-alt fs-2"></i>
+                        <h5 class="font-title fs-5 text-j-dark">300 International Dr Suite 100, Buffalo NY 14221</h5>
                     </div>
-                    <div class="col-12 col-lg-12">
-                        <a :href="`mailto:${store.contact.email}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <span class="material-symbols-outlined-none fs-1">send</span>
-                            <h5 class="font-title fs-5 text-j-dark">{{store.contact.email}}</h5>
-                            <!-- <p class="font-normal text-dark fs-small">{{store.contact.email}}</p> -->
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-12">
-                        <a :href="`${store.contact.whatsapp}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <!-- <span class="material-symbols-outlined-none fs-1">add_call</span> -->
-                            <i class="bi bi-whatsapp fs-2"></i>
-                            <h5 class="font-title fs-5 text-j-dark">Whatsapp</h5>
-                            <!-- <p class="font-normal text-dark fs-small">{{store.contact.number}}</p> -->
-                        </a>
-                    </div>
-                    <!-- <div class="col-12 col-lg-12">
-                        <a href="https://buy.stripe.com/6oE4gNd6ffOadUI5kk" target="_self"class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <i class="bi bi-credit-card fs-2"></i>
-                            <h5 class="font-title fs-5 text-j-dark">Pay Online</h5>
-                        </a>
-                    </div> -->
                 </div>
             </div>
-            <!-- <div class="col-12 col-lg-6">
-                <aside class="d-flex bg-light flex-column gap-2 p-3 shadow-sm rounded">
-                    <input type="text" placeholder="Enter your name" class="form-control">
-                    <input type="text" placeholder="Enter the subject" class="form-control">
-                    <textarea rows="7" class="form-control" placeholder="Type your message.."></textarea>
-                    <a href="" class="btn-action">Send message</a>
-                </aside>
-            </div> -->
         </div>
-    </section>
+    </div>
 </section>

@@ -1,4 +1,4 @@
-<section class="p-3" style="margin-top: 45px;">
+<section class="p-3" style="margin-top: 60px;">
     <section id="hero" class="container-fluid rounded bg-heroic p-3">
         <div class="row align-items-end justify-content-between">
             <div class="col-12 col-md-8 col-lg-6">
@@ -25,12 +25,12 @@
                 </aside>
             </div>
             <div class="d-none d-md-block col-1">
-                <aside class="d-flex flex-column align-items-end gap-1 text-light">
+                <aside class="d-flex flex-column align-items-end gap-2 text-light">
                     <span role="button" @click="utilities.shareBy(location.pathname,location.href)" title="Share this page." class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-share"></i></span>
-                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-whatsapp"></i></span>
-                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-linkedin"></i></span>
-                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-instagram"></i></span>
-                    <span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-envelope"></i></span>
+                    <a :href="store.contact.whatsapp"><span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-whatsapp"></i></span></a>
+                    <a :href="store.contact.linkedIn"><span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-linkedin"></i></span></a>
+                    <a :href="store.contact.instagram"><span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-instagram"></i></span></a>
+                    <a :href="'mailto:'+store.contact.email"><span role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-envelope"></i></span></a>
                     <!-- <span @click="applyBackground()" role="button" class="bg-glass px-2 py-1 rounded font-normal"><i class="bi bi-upload"></i></span> -->
                     
                     <!-- <div class="dropup dropup-center">
