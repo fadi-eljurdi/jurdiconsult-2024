@@ -1,73 +1,83 @@
-<section class="p-3" style="overflow-x: hidden !important;">
-    <div class="container-fluid">
-        <div class="row justify-content-between g-3">
-            <div class="col-12">
-                <div class="d-flex flex-column gap-2">
-                    <h4 data-aos="zoom-in-right" data-aos-duration="1000" class="fs-4 font-title">Our Services</h4>
-                    <div class="d-flex flex-wrap align-items-center gap-1 font-normal">
-                        <!-- <div v-for="tag in filteredServices" class="d-flex align-items-center gap-2 px-2 bg-light bg-j-primary-hover border fs-x-small rounded fw-bold text-j-dark text-lowercase">#{{tag.title}}</div> -->
-                        <div v-for="tag in ['media_production','gameing_consultancy','Film_making','Content_Creation','Production_Management','Middle_East','script_assessment','script_localizing','title_search']" class="d-flex align-items-center gap-2 px-2 bg-light bg-j-primary-hover border fs-x-small rounded fw-bold text-j-dark text-lowercase">#{{tag}}</div>
-                    </div>
-                    <!-- <p class="fs-small">We offer focused media consultancy within specific areas to elevate your business strategy in the MENAT region. For broadcasters, we provide guidance on audience segmentation, format development, optimising content scheduling, and navigating rights acquisition. Production houses benefit from our expertise in advising on talent management, budgeting, location scouting with regional insight, and streamlining post-production workflows. We advise ad agencies on crafting campaigns tailored to MENAT audiences, provide media buying insights, and support performance analysis and optimization. For gaming companies,  our specialised consulting covers artwork and game design, cultural sensitivity assessment, monetization strategies and strategies for influencer marketing and community engagement.</p> -->
+<section class="container-fluid my-5">
+    <div class="row justify-content-between g-3">
+        <div class="col-12">
+            <section class="d-flex flex-column align-items-center gap-3">
+                <h4 class="fs-4 font-title">Our Services</h4>
+                <div class="d-flex flex-wrap align-items-center gap-1 font-normal">
+                    <div v-for="tag in ['media_production','gameing_consultancy','Film_making','Content_Creation','Production_Management','Middle_East','script_assessment','script_localizing','title_search']" class="d-flex align-items-center gap-2 px-2 bg-light bg-j-primary-hover border fs-smaller rounded fw-bold text-j-dark text-lowercase">#{{tag}}</div>
                 </div>
-            </div>
-            
-            <div class="col-12" data-aos="fade-left" data-aos-duration="1500">
-                <swiper-container v-if="store.spinner" :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 10,
-                    },
-                }">
-                    <swiper-slide v-for="node in filteredServices" :key="node">
-                        <section style="height: 280px;" class="bg-light d-flex flex-column align-items-center justify-content-evenly gap-4 p-3 py-4 rounded-15 border">
-
-                            <!-- <div class="rounded-pill skeleton" style="width: 50%; height: .8rem;"></div> -->
-                            <div class="ratio ratio-1x1" style="width: 80px;">
-                                <div class="object-fit-cover skeleton rounded-circle"></div>
-                            </div>
-                            <div class="d-flex flex-column align-items-center gap-2 w-100">
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 70%; height: .3rem;"></div>
-                            </div>
-                            
-                            <div class="rounded-pill skeleton" style="width: 25%; height: .4rem;"></div>
-                        </section>
+            </section>
+        </div>
+        
+        <div class="col-12">
+            <swiper-container v-if="store.spinner" :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
+                400: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+            }">
+                <swiper-slide v-for="node in filteredServices" :key="node">
+                    <section style="height: 280px;" class="bg-light d-flex flex-column align-items-center justify-content-evenly gap-4 p-3 py-4 rounded-15 border">
+                        <div class="ratio ratio-1x1" style="width: 80px;">
+                            <div class="object-fit-cover skeleton rounded-circle"></div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center gap-2 w-100">
+                            <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                            <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                            <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                            <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                            <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                            <div class="rounded-pill skeleton" style="width: 70%; height: .3rem;"></div>
+                        </div>
                         
-                    </swiper-slide>
-                </swiper-container>
-                <swiper-container v-else :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 10,
-                    },
-                }">
-                    <swiper-slide v-for="node in filteredServices" :key="node">
-                        
-                        <section style="height: 280px; cursor: pointer;" class="bg-light d-flex flex-column align-items-center justify-content-evenly gap-1 p-3 rounded-15 border">
-                            <!-- <span class="material-symbols-outlined fs-1 text-j-primary">verified</span> -->
-                            <figure class="ratio ratio-1x1" style="width: 80px;">
-                                <img :src="node.media" alt="pic" class="object-fit-cover rounded-circle">
-                            </figure>
-                            <a :href="node.url" ><strong class="font-title text-center text-fade-2 text-j-dark fs-5 text-uppercase py-2">{{node.title}}</strong></a>
-                            <p class="font-normal text-j-dark text-fade-2 fs-small text-center">{{node.description}}</p>
-                            <a :aria-label="node.title" :href="node.url" class="text-j-primary fs-x-small font-normal d-flex align-items-center gap-2">show more</a>
-                        </section>
-                    </swiper-slide>
-                </swiper-container>
-            </div>
+                        <div class="rounded-pill skeleton" style="width: 25%; height: .4rem;"></div>
+                    </section>
+                    
+                </swiper-slide>
+            </swiper-container>
+            <swiper-container v-else :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
+                400: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+            }">
+                <swiper-slide v-for="node in filteredServices" :key="node">
+                    
+                    <section style="height: 280px; cursor: pointer;" class="bg-light d-flex flex-column align-items-center justify-content-evenly gap-1 p-3 rounded-15 border">
+                        <!-- <span class="material-symbols-outlined fs-1 text-j-primary">verified</span> -->
+                        <figure class="ratio ratio-1x1" style="width: 80px;">
+                            <img :src="node.media" alt="pic" class="object-fit-cover rounded-circle">
+                        </figure>
+                        <a :href="node.url" ><strong class="font-title text-center text-fade-2 text-j-dark fs-5 text-uppercase py-2">{{node.title}}</strong></a>
+                        <p class="font-normal text-j-dark text-fade-2 fs-small text-center">{{node.description}}</p>
+                        <a :aria-label="node.title" :href="node.url" class="text-j-primary fs-x-small font-normal d-flex align-items-center gap-2">show more</a>
+                    </section>
+                </swiper-slide>
+            </swiper-container>
         </div>
     </div>
 </section>
