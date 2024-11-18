@@ -1,10 +1,10 @@
 <section class="container-fluid my-5">
     <div class="row justify-content-between g-3">
         <div class="col-12">
-            <section class="d-flex flex-column align-items-center gap-3">
-                <h4 class="fs-4 font-title">Our Services</h4>
+            <section class="d-flex flex-column gap-3 align-items-center">
+                <h1 class="fs-1 font-handwriting text-j-100">- Our Services -</h1>
                 <div class="d-flex flex-wrap align-items-center gap-1 font-normal">
-                    <div v-for="tag in ['media_production','gameing_consultancy','Film_making','Content_Creation','Production_Management','Middle_East','script_assessment','script_localizing','title_search']" class="d-flex align-items-center gap-2 px-2 bg-light bg-j-primary-hover border fs-smaller rounded fw-bold text-j-dark text-lowercase">#{{tag}}</div>
+                    <div v-for="tag in ['media_production','gameing_consultancy','Film_making','Content_Creation','Production_Management','Middle_East','script_assessment','script_localizing','title_search']" class="d-flex align-items-center gap-0 px-2 bg-j-light border fs-smaller rounded fw-bold text-j-100 text-lowercase"><span class="text-j-200">#</span>{{tag}}</div>
                 </div>
             </section>
         </div>
@@ -29,7 +29,7 @@
                 },
             }">
                 <swiper-slide v-for="node in filteredServices" :key="node">
-                    <section style="height: 280px;" class="bg-light d-flex flex-column align-items-center justify-content-evenly gap-4 p-3 py-4 rounded-15 border">
+                    <section style="height: 280px;" class="bg-j-light d-flex flex-column align-items-center justify-content-evenly gap-4 p-3 py-4 rounded-25 border">
                         <div class="ratio ratio-1x1" style="width: 80px;">
                             <div class="object-fit-cover skeleton rounded-circle"></div>
                         </div>
@@ -67,14 +67,14 @@
             }">
                 <swiper-slide v-for="node in filteredServices" :key="node">
                     
-                    <section style="height: 280px; cursor: pointer;" class="bg-light d-flex flex-column align-items-center justify-content-evenly gap-1 p-3 rounded-15 border">
+                    <section style="height: 280px; cursor: pointer;" class="bg-j-light d-flex flex-column align-items-center justify-content-evenly gap-1 p-3 rounded-25 border">
                         <!-- <span class="material-symbols-outlined fs-1 text-j-primary">verified</span> -->
                         <figure class="ratio ratio-1x1" style="width: 80px;">
                             <img :src="node.media" alt="pic" class="object-fit-cover rounded-circle">
                         </figure>
-                        <a :href="node.url" ><strong class="font-title text-center text-fade-2 text-j-dark fs-5 text-uppercase py-2">{{node.title}}</strong></a>
+                        <a :href="node.url" ><strong class="font-title text-center text-fade-2 text-j-100 fs-5 text-uppercase py-2">{{node.title}}</strong></a>
                         <p class="font-normal text-j-dark text-fade-2 fs-small text-center">{{node.description}}</p>
-                        <a :aria-label="node.title" :href="node.url" class="text-j-primary fs-x-small font-normal d-flex align-items-center gap-2">show more</a>
+                        <a :aria-label="node.title" :href="node.url" class="text-j-300 fs-x-small font-normal d-flex align-items-center gap-2">show more</a>
                     </section>
                 </swiper-slide>
             </swiper-container>

@@ -4,10 +4,8 @@
         <div class="row justify-content-center g-3">
             <div class="col-12 col-lg-12">
                 <div class="d-flex flex-column gap-3 p-3 pb-5 text-center">
-                    <h3 data-aos="zoom-in-right" data-aos-duration="1000" class="font-title text-j-dark">Our News <i class="font-handwriting text-j-primary">&</i> Insights</h3>
+                    <h3 data-aos="zoom-in-right" data-aos-duration="1000" class="font-title text-j-100">Our News <i class="font-handwriting text-j-primary">&</i> Insights</h3>
                     <p data-aos="zoom-out" data-aos-duration="1500"  class="font-normal text-j-dark fs-small">Explore JURDI & CO's blog for insightful articles on media, technology, IP, and more.</p>
-                    <!-- <a href="" class="btn-action-outline">Explore all blogs</a> -->
-                    <!-- <a href="/blogs/" class="text-j-dark fs-x-small font-normal d-flex align-items-center gap-2">Explore all blogs <i class="m-0 bi bi-arrow-right"></i></a> -->
                 </div>
             </div>
             <div class="col-12 col-lg-12" data-aos="fade-left" data-aos-duration="1500">
@@ -24,7 +22,13 @@
                     <swiper-slide v-for="node in filteredBlogs" :key="node">
                         <section class="d-flex flex-column shadow-sm rounded-chat py-3">
                             <div class="p-2 pt-3 bg-glass d-flex flex-column gap-3 placeholder-glow">
-                                <span class="material-symbols-outlined fs-1 text-j-primary">news</span>
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-layout-text-window text-j-200" viewBox="0 0 16 16">
+                                        <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+                                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1zm1 3v10a1 1 0 0 1-1 1h-2V4zm-4 0v11H2a1 1 0 0 1-1-1V4z"/>
+                                    </svg>
+                                </div>
+                                <!-- <span class="material-symbols-outlined fs-1 text-j-primary">news</span> -->
                                 <p class="font-normal text-j-grey fs-x-small fw-bold"><span class="px-2 py-1 bg-j-dark rounded text-light ls-1 me-2">BLOG</span></p>
                                 <div class="placeholder bg-j-primary rounded-pill" style="width: 75%; height: .8rem;"></div>
                                 <div class="d-flex flex-column gap-2">
@@ -56,15 +60,19 @@
                 }">
                     <swiper-slide v-for="node in filteredBlogs" :key="node">
                         <section class="d-flex flex-column shadow-sm rounded-chat">
-                            <div class="p-3 pt-3 bg-glass d-flex flex-column gap-2">
-                                <span class="material-symbols-outlined fs-1 text-j-primary">news</span>
-                                <!-- <img :src="node.media" alt="thumbnail" class="object-fit-cover rounded" width="75" height="75"> -->
-                                <div class="d-flex flex-column gap-2">
-                                    <p class="font-normal text-j-grey fs-x-small fw-bold"><span class="px-2 py-1 bg-j-black rounded text-light ls-1 me-2">BLOG</span><time>{{utilities.timo(node.timestamp)}}</time></p>
-                                    <h5 class="font-title text-j-dark fs-5 text-fade-2" style="min-height: 48px;">{{node.title}}</h5>
+                            <div class="p-3 pt-3 bg-glass d-flex flex-column gap-3">
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-layout-text-window text-j-200" viewBox="0 0 16 16">
+                                        <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+                                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1zm1 3v10a1 1 0 0 1-1 1h-2V4zm-4 0v11H2a1 1 0 0 1-1-1V4z"/>
+                                    </svg>
                                 </div>
+                                <h5 class="font-title text-j-100 fs-5 text-fade-2" style="min-height: 48px;">{{node.title}}</h5>
                                 <p class="font-normal text-j-dark text-justify fs-small text-fade-4" style="min-height: 78px;">{{node.description}}</p>
-                                <a :aria-label="node.title" :href="node.url" class="fs-x-small text-j-dark font-normal text-center ls-1 mt-3 mb-1">continue reading</a>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <time class="fs-x-small font-normal text-j-grey">{{utilities.timo(node.timestamp)}}</time>
+                                    <a :aria-label="node.title" :href="node.url" class="fs-x-small text-j-200 font-normal text-center ls-1 mt-3 mb-1">continue reading</a>
+                                </div>
                             </div>
                         </section>
                     </swiper-slide>
