@@ -39,12 +39,21 @@
         </div>
     </div>
     <div class="row my-5 justify-content-center">
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
             <div class="font-handwriting text-center fs-3 mb-5">Proud to have served the below companies</div>
             <section class="d-flex flex-column gap-3">
                 <section>
-                    <swiper-container space-between="20" slides-per-view="5" autoplay-delay="1000"
-                        autoplay-disable-on-interaction="true">
+                    <swiper-container space-between="20" slides-per-view="3" autoplay-delay="1000"
+                        autoplay-disable-on-interaction="true" :breakpoints="{
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 10,
+                            },
+                            1024: {
+                                slidesPerView: 5,
+                                spaceBetween: 10,
+                            },
+                        }">
                         <swiper-slide v-for="node in new Array(12)">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="ratio ratio-1x1" style="width: 100px;">
