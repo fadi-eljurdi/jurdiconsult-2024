@@ -4,8 +4,8 @@ export default {
     template: await utilities.getPage('/js/components/navbar/index.html'),
     data() {
         return {
-            store,
-            utilities
+            // store,
+            // utilities
         }
     },
     methods: {
