@@ -12,7 +12,7 @@ export default {
     computed: {
         filteredBlogs() {
             if (this.store.spinner) {
-                return ['', '', '', '', '', '', '', '', '', '']
+                return new Array(12)
             }
 
             if (this.path == '/blogs/') return this.store.blogs.filter(node => node.badge.trim().toUpperCase() != 'DEMO')

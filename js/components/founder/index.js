@@ -7,5 +7,10 @@ export default {
             store,
             utilities
         }
+    },
+    computed:{
+        getImages(){
+            return new Array(10)
+        }
     }
 }

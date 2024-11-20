@@ -1,5 +1,5 @@
 import utilities from "../../utilities.js"
-import store from '../../store.js'
+// import store from '../../store.js'
 export default {
     template: await utilities.getPage('/js/components/navbar/index.html'),
     data() {
@@ -11,8 +11,8 @@ export default {
     methods: {
         getActiveClass(name) {
             
-            if (location.pathname == name || location.name == '/index.html') {
-                console.log(location.pathname);
+            if (location.pathname == name) {
+                // console.log(location.pathname);
                 return "navbar-link-active"
             }
 
