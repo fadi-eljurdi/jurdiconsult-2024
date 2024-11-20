@@ -67,6 +67,10 @@ const app = Vue.createApp({
             }
         }
 
+        setTimeout(() => {
+            this.store.togNewsLetter = !this.store.togNewsLetter
+        }, 5000);
+
 
     }
 })
@@ -101,6 +105,10 @@ app.component('founder-section', founderSection)
 
 import footerSection from './components/footer-section/index.js'
 app.component('footer-section', footerSection)
+
+
+import newsletter from './components/newsletter/index.js'
+app.component('newsletter', newsletter)
 
 
 // BLOGS Components

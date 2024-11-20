@@ -1,0 +1,23 @@
+<section v-if="store.togNewsLetter" class="w-100 h-100 bg-glass position-fixed top-0 z-3 d-flex justify-content-center align-items-center">
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <aside class="scale-in-center p-3 p-md-5 bg-j-light rounded border d-flex flex-column align-items-center justify-content-center gap-3">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-layout-text-window text-j-200" viewBox="0 0 16 16">
+                            <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1zm1 3v10a1 1 0 0 1-1 1h-2V4zm-4 0v11H2a1 1 0 0 1-1-1V4z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-center font-title fs-3 text-j-100">Join our newsletter</h4>
+                    <div class="input-group my-2">
+                        <input type="text" class="form-control" placeholder="Enter your email">
+                        <button class="input-group-text btn btn-action">Subscribe</button>
+                    </div>
+                    <p class="text-center fs-x-small text-j-grey">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi odit repudiandae ipsam nulla aperiam? Odit cum vel earum, reprehenderit tenetur iste, ipsa iusto possimus qui, assumenda culpa eaque eveniet repellat.</p>
+                    <button @click="store.togNewsLetter = !store.togNewsLetter" class="btn btn-sm btn-outline-secondary px-3">close</button>
+                </aside>
+            </div>
+        </div>
+    </section>
+</section>

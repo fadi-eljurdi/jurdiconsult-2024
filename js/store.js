@@ -1,7 +1,7 @@
 import Page from './classes/Page.js'
 export default {
     version: '1.2',
-    devmode:false,
+    devmode: false,
     OAuthUser: false,
     username: '',
     password: '',
@@ -16,6 +16,7 @@ export default {
     nextContact: {},
     nextPage: new Page(),
     navbarBg: 'bg-transparent',
-    nextUpdatedPage: new Page()
+    nextUpdatedPage: new Page(),
+    togNewsLetter: false
 
 }
