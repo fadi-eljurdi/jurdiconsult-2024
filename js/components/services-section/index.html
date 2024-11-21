@@ -71,7 +71,7 @@
                     <section style="height: 280px; cursor: pointer;" class="bg-j-light d-flex flex-column align-items-center justify-content-evenly gap-1 p-3 rounded-25 border">
                         <!-- <span class="material-symbols-outlined fs-1 text-j-primary">verified</span> -->
                         <figure class="ratio ratio-1x1" style="width: 80px;">
-                            <img :src="node.media" alt="pic" class="object-fit-cover rounded-circle">
+                            <img loading="lazy" :src="node.media" alt="pic" class="object-fit-cover rounded-circle">
                         </figure>
                         <a :href="node.url" ><strong class="font-title text-center text-fade-2 text-j-100 fs-5 text-uppercase py-2">{{node.title}}</strong></a>
                         <p class="font-normal text-j-dark text-fade-2 fs-small text-center">{{node.description}}</p>
