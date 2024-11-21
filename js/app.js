@@ -14,7 +14,30 @@ const app = Vue.createApp({
             store,
             utilities,
             spinner: false,
-            translated: false
+            translated: false,
+            
+            docs:[
+                {
+                    text:'Privacy Policy',
+                    url:'/docs/privacy-policy.html',
+                },
+                {
+                    text:'Disclaimer',
+                    url:'/docs/disclaimer.html',
+                },
+                {
+                    text:'Terms & Conditions',
+                    url:'/docs/terms.html',
+                },
+                {
+                    text:'Acceptable Usage',
+                    url:'/docs/acceptable-usage.html',
+                },
+                {
+                    text:'Cookie Policy',
+                    url:'/docs/cookie-policy.html',
+                }
+            ]
         }
     },
     methods: {

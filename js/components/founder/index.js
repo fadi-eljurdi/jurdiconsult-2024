@@ -10,7 +10,18 @@ export default {
     },
     computed:{
         getImages(){
-            return new Array(10)
+            return [
+                '/assets/c1.png',
+                '/assets/c2.png',
+                '/assets/c3.png',
+                '/assets/c4.png',
+                '/assets/c5.png',
+                '/assets/c6.png',
+                '/assets/c7.png',
+                '/assets/c8.png',
+                '/assets/c9.png',
+                '/assets/c10.png',
+            ]
         }
     }
 }

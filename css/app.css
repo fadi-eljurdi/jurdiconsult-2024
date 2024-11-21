@@ -481,3 +481,7 @@ a {
 figure {
     margin-bottom: 0;
 }
+
+.img-scale {
+    transform: scale(2.5);
+}

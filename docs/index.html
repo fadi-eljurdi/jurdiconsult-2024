@@ -49,28 +49,21 @@
     <header>
         <navbar></navbar>
     </header>
-    <main class="d-flex flex-column gap-5 pb-5" style="margin-top: 100px;">
-        <div class="container">
+    <main class="" style="margin-top: 100px;">
+        <div class="container my-5" style="min-height: 50vh;">
             <div class="row justify-content-start g-3">
-                <div class="col-12 col-lg-6">
-                    <aside class="d-flex flex-column gap-2">
-                        
-                        <a href="/docs/privacy-policy.html" class="d-flex align-items-center gap-2">
-                            <span class="material-symbols-outlined text-primary-100">link</span><span class="opacity-75">Privacy Policy</span>
-                        </a>
-                        <a href="/docs/cookie-policy.html" class="d-flex align-items-center gap-2">
-                            <span class="material-symbols-outlined text-primary-100">link</span><span class="opacity-75">Cookie Policy</span>
-                        </a>
-                        <a href="/docs/acceptable-usage.html" class="d-flex align-items-center gap-2">
-                            <span class="material-symbols-outlined text-primary-100">link</span><span class="opacity-75">Acceptable Usage</span>
-                        </a>
-                        <a href="/docs/disclaimer.html" class="d-flex align-items-center gap-2">
-                            <span class="material-symbols-outlined text-primary-100">link</span><span class="opacity-75">Disclaimer</span>
-                        </a>
-                        <a href="/docs/terms.html" class="d-flex align-items-center gap-2">
-                            <span class="material-symbols-outlined text-primary-100">link</span><span class="opacity-75">Terms and Conditions</span>
-                        </a>
-                    </aside>
+                <div class="col-12 col-lg-4" v-for="node in docs">
+                    <a :href="node.url">
+                        <section class="p-3 bg-j-light rounded d-flex flex-column align-items-center gap-3 border">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-text text-j-300" viewBox="0 0 16 16">
+                                    <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                </svg>
+                            </div>
+                            <h5 class="text-center font-normal fs-4 fw-bold text-j-100">{{node.text}}</h5>
+                        </section>
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,10 +1,8 @@
 <section class="d-flex flex-column gap-3">
     <aside class="p-2 bg-light rounded shadow-sm d-flex flex-column gap-3"
         v-if="[...canvaLinks,...googleFiles,...googleFormsLinks, ...vismeLinks].length != 0">
-        <h5 class="fs-6 text-primary-200 font-title d-flex align-items-center gap-2">
-
+        <h5 class="fs-5 text-j-100 font-normal d-flex align-items-center gap-2">
             <span>Attachments</span>
-            <span class="material-symbols-outlined fs-5">attachment</span>
         </h5>
 
         <section class="d-flex flex-column gap-1">
@@ -53,8 +51,6 @@
 
     <aside class="p-2 bg-light rounded shadow-sm d-flex flex-column gap-3">
         <h5 class="fs-5 text-j-100 font-normal d-flex align-items-center gap-2">
-
-            <!-- <span class="material-symbols-outlined fs-5">link</span> -->
             <span>Check also</span>
         </h5>
         <div v-if="store.spinner" class="d-flex flex-column gap-2">

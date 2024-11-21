@@ -2,11 +2,11 @@
     <section id="hero" class="container-fluid rounded bg-hero p-5" style="min-height: 60vh;">
         <div class="col-12">
             <aside class="d-flex flex-column align-items-center gap-3">
-                <div class="ratio ratio-1x1" style="width: 100px;">
-                    <img src="https://placehold.co/500" alt="logo" class="object-fit-cover rounded-25">
+                <div data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" class="ratio ratio-1x1" style="width: 100px;">
+                    <img :src="store.logo" alt="logo" class="object-fit-cover img-scale">
                 </div>
-                <h1 class="font-title fs-1 text-j-light">Arabia Bridle Path</h1>
-                <p class="font-normal text-center text-j-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A assumenda quasi quae inventore, tempore dolore tenetur iusto explicabo obcaecati deleniti aliquid consectetur, aperiam ad cupiditate minus? Eius corrupti quisquam similique.</p>
+                <h1 data-aos="zoom-in" data-aos-delay="200"  data-aos-once="true" class="font-title fs-1 text-j-light">Arabia Bridle Path</h1>
+                <p data-aos="zoom-in" data-aos-delay="300" data-aos-once="true" class="font-normal text-center text-j-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A assumenda quasi quae inventore, tempore dolore tenetur iusto explicabo obcaecati deleniti aliquid consectetur, aperiam ad cupiditate minus? Eius corrupti quisquam similique.</p>
                 <div class="d-flex gap-2">
                     <a href="" class="btn-action">Send Message</a>
                     <span role="button" title="Click to manually upload new bg" @click="applyBackground()"  class="btn btn-dark">

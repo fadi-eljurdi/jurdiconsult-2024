@@ -8,35 +8,8 @@
               <p class="fs-smaller font-normal text-fade2 pt-2 text-capitalize text-j-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </div>
             <nav class="d-flex flex-column roboto gap-1">
-                <a aria-label="home" href="/" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Home</span>
-                </a>
-                <a aria-label="services"  href="/services/" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Services</span>
-                </a>
-                <a aria-label="blogs"  href="/blogs/" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">News & Insights</span>
-                </a>
-                <a aria-label="privacy-policy"  href="/docs/privacy-policy.html" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Privacy Policy</span>
-                </a>
-                <a aria-label="disclaimer"  href="/docs/disclaimer.html" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Disclaimer</span>
-                </a>
-                <a aria-label="terms"  href="/docs/terms.html" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Terms & Conditions</span>
-                </a>
-                <a aria-label="acceptable-usage"  href="/docs/acceptable-usage.html" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Acceptable Usage</span>
-                </a>
-                <a aria-label="cookie-policy"  href="/docs/cookie-policy.html" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Cookie Policy</span>
-                </a>
-                <a aria-label="contact"  href="/contact/" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Contact</span>
-                </a>
-                <a aria-label="contact" href="https://buy.stripe.com/6oE4gNd6ffOadUI5kk" target="_self" class="d-flex align-items-center gap-2">
-                    ⎔ <span class="opacity-75 w-100">Pay Online</span>
+                <a v-for="node in firstSection" :aria-label="node.text" :href="node.url" class="d-flex align-items-center gap-2">
+                  <span class="opacity-75 w-100">⎔ {{node.text}}</span>
                 </a>
             </nav>
           </aside>
@@ -50,14 +23,12 @@
             
             <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
               <div class="d-flex align-items-center gap-2" v-for="node in new Array(8)">
-                <!-- <div class="skeleton rounded-circle" style="width: 1rem; height: 1rem;"></div> -->
-                ⎔ 
-                <div class="skeleton rounded-pill" style="width: 90%; height: .5rem;"></div>
+                ⎔ <div class="skeleton rounded-pill" style="width: 90%; height: .5rem;"></div>
               </div>
             </nav>
             <nav v-else class="d-flex flex-column roboto gap-1">
                 <a :aria-label="node.title"  :href="node.url" class="d-flex align-items-center gap-2" v-for="node in store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO')">
-                    ⎔ <span class="opacity-75 w-100">{{node.title}}</span>
+                  <span class="opacity-75 w-100">⎔ {{node.title}}</span>
                 </a>
             </nav>
           </aside>
@@ -70,14 +41,12 @@
             </div>
             <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
               <div class="d-flex align-items-center gap-2" v-for="node in new Array(8)">
-                <!-- <div class="skeleton rounded-circle" style="width: 1rem; height: 1rem;"></div> -->
-                ⎔ 
-                <div class="skeleton rounded-pill" style="width: 90%; height: .5rem;"></div>
+                ⎔ <div class="skeleton rounded-pill" style="width: 90%; height: .5rem;"></div>
               </div>
             </nav>
             <nav v-else class="d-flex flex-column roboto gap-1">
               <a :aria-label="node.title"  :href="node.url" class="d-flex align-items-center gap-2" v-for="node in store.blogs.filter(node => node.badge.trim().toUpperCase() != 'DEMO').slice(-1 * store.services.length).reverse()">
-                ⎔ <span class="opacity-75 text-fade w-100">{{node.title}}</span>
+                <span class="opacity-75 text-fade w-100">⎔ {{node.title}}</span>
               </a>
             </nav>
           </aside>
