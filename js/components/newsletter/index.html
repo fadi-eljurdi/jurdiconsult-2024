@@ -22,9 +22,8 @@
     </section>
 </section> -->
 <section v-if="store.togNewsLetter" class="newsletter-container d-flex flex-column gap-1">
-    <aside class="scale-up-tr chat-message">
+    <aside v-if="!openForm" class="scale-up-tr chat-message">
         <div class="d-flex align-items-center gap-3">
-            
             <h6>Would you like to subscribe to our newsletter? 📰📝</h6>
         </div>
     </aside>
@@ -39,8 +38,11 @@
     </aside>
     <aside v-if="openForm" class="scale-up-tr-d1 chat-message py-1">
         <div class="input-group my-2">
-            <input name="newsletter email" type="text" class="form-control" placeholder="Enter your email">
-            <button class="input-group-text btn text-light bg-j-100">Subscribe</button>
+            <input @keyup.enter="subscribe()" v-model.trim="formInput" name="newsletter email" type="text" class="form-control" placeholder="Enter your email">
+            <button :disabled="!isValid() || spinner" @click="subscribe()" class="input-group-text btn text-light bg-j-100">
+                <span v-if="!spinner">Subscribe</span>
+                <div v-else style="width: 68.36px;"><span class="spinner-grow spinner-grow-sm"></span></div>
+            </button>
         </div>
     </aside>
 </section>

@@ -17781,7 +17781,16 @@ function getVismeId(url) {
     }
 }
 
+function validateEmail(email) {
+  // Regular expression to validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  // Test the email against the regex
+  return emailRegex.test(email);
+}
+
 export default {
+    validateEmail,
     getSymbols,
     copi,
     getVismeId,
