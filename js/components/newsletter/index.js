@@ -5,7 +5,8 @@ export default {
     data() {
         return {
             store,
-            utilities
+            utilities,
+            openForm: false
         }
     }
 }

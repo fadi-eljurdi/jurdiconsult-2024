@@ -3,9 +3,9 @@
         <div class="col-12">
             <section class="d-flex flex-column gap-3 align-items-center">
                 <h1 data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" class="fs-1 font-handwriting text-j-100">- Our Services -</h1>
-                <div data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" class="d-flex flex-wrap align-items-center justify-content-center gap-1 font-normal">
+                <!-- <div data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" class="d-flex flex-wrap align-items-center justify-content-center gap-1 font-normal">
                     <div v-for="tag in ['media_production','gameing_consultancy','Film_making','Content_Creation','Production_Management','Middle_East','script_assessment','script_localizing','title_search']" class="d-flex align-items-center gap-0 px-2 bg-j-light border fs-smaller rounded fw-bold text-j-100 text-lowercase"><span class="text-j-200">#</span>{{tag}}</div>
-                </div>
+                </div> -->
             </section>
         </div>
         
@@ -48,7 +48,7 @@
                     
                 </swiper-slide>
             </swiper-container>
-            <swiper-container v-else :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
+            <swiper-container id="s-swiper" v-else :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
                 400: {
                     slidesPerView: 1,
                     spaceBetween: 10,
@@ -79,6 +79,17 @@
                     </section>
                 </swiper-slide>
             </swiper-container>
+            <!-- <div class="w-100 h-100 position-absolute start-50 translate-middle z-1 border" style="top: 40;">
+                <div class="d-flex justify-content-between">
+                    <div class="p-3 bg-light rounded"><span>◀</span></div>
+                    <div class="p-3 bg-light rounded"><span>▶</span></div>
+                </div>
+            </div> -->
+            <!-- ◀ ▶  -->
+            <div v-if="!store.spinner" class="d-flex justify-content-center gap-2 mt-3">
+                <button @click="slideBack()" role="button" class="btn btn-sm btn-outline-dark px-4">back</button>
+                <button @click="slideNext()" role="button" class="btn btn-sm btn-outline-dark px-4">next</button>
+            </div>
         </div>
     </div>
 </section>

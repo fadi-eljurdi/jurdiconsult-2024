@@ -485,3 +485,20 @@ figure {
 .img-scale {
     transform: scale(2.5);
 }
+
+/* Newsletter */
+.newsletter-container {
+    position: fixed;
+    z-index: 3;
+    bottom: .8rem;
+    right: .8rem;
+}
+
+.chat-message{
+    padding: .8rem;
+    border-radius: .8rem;
+    border-top-right-radius: 0;
+    background-color: var(--j-300);
+    color: var(--j-light);
+
+}

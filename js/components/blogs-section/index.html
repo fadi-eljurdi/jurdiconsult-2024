@@ -47,7 +47,7 @@
                         </section>
                     </swiper-slide>
                 </swiper-container>
-                <swiper-container v-else :pagination="{clickable:true}" :spaceBetween="15" :breakpoints="{
+                <swiper-container id="b-swiper" v-else :pagination="{clickable:true}" :spaceBetween="15" :breakpoints="{
                     768: {
                         slidesPerView: 1,
                         spaceBetween: 10,
@@ -76,6 +76,10 @@
                         </section>
                     </swiper-slide>
                 </swiper-container>
+                <div v-if="!store.spinner" class="d-flex justify-content-center gap-2 mt-3">
+                    <button @click="slideBack()" role="button" class="btn btn-sm btn-outline-dark px-4">back</button>
+                    <button @click="slideNext()" role="button" class="btn btn-sm btn-outline-dark px-4">next</button>
+                </div>
             </div>
         </div>
     </div>

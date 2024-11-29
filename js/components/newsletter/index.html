@@ -1,4 +1,4 @@
-<section v-if="store.togNewsLetter" class="w-100 h-100 bg-glass position-fixed top-0 z-3 d-flex justify-content-center align-items-center">
+<!-- <section v-if="store.togNewsLetter" class="w-100 h-100 bg-glass position-fixed top-0 z-3 d-flex justify-content-center align-items-center">
     <section class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-6">
@@ -20,4 +20,27 @@
             </div>
         </div>
     </section>
+</section> -->
+<section v-if="store.togNewsLetter" class="newsletter-container d-flex flex-column gap-1">
+    <aside class="scale-up-tr chat-message">
+        <div class="d-flex align-items-center gap-3">
+            
+            <h6>Would you like to subscribe to our newsletter? 📰📝</h6>
+        </div>
+    </aside>
+    <aside v-if="!openForm" class="scale-up-tr chat-message">
+        <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-light" @click="openForm = !openForm">Yes please 😊</button>
+            <button class="btn btn-sm btn-outline-light" @click="store.togNewsLetter = !store.togNewsLetter">No thanks 🙃</button>
+        </div>
+    </aside>
+    <aside v-if="openForm" class="scale-up-tr chat-message">
+        <h6>Thats Ammazing!! 😎🚀 Please type your email below ✉️</h6>
+    </aside>
+    <aside v-if="openForm" class="scale-up-tr-d1 chat-message py-1">
+        <div class="input-group my-2">
+            <input name="newsletter email" type="text" class="form-control" placeholder="Enter your email">
+            <button class="input-group-text btn text-light bg-j-100">Subscribe</button>
+        </div>
+    </aside>
 </section>

@@ -12,5 +12,17 @@ export default {
         filteredServices() {
             return this.store.spinner ? new Array(10) : this.store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO')
         }
+    },
+    methods: {
+        slideNext() {
+            const swiperEl = document.querySelector('#s-swiper');
+            // console.log(swiperEl.swiper);
+            swiperEl.swiper.slideNext();
+        },
+        slideBack() {
+            const swiperEl = document.querySelector('#s-swiper');
+            // console.log(swiperEl.swiper);
+            swiperEl.swiper.slidePrev();
+        },
     }
 }
