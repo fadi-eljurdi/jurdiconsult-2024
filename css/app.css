@@ -490,8 +490,9 @@ figure {
 .newsletter-container {
     position: fixed;
     z-index: 3;
-    bottom: .8rem;
-    right: .8rem;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
 }
 
 .chat-message{
@@ -501,4 +502,12 @@ figure {
     background-color: var(--j-300);
     color: var(--j-light);
 
+}
+
+/* HERO section */
+.hero-section{
+    min-height: 60vh;
+    margin: 1rem;
+    margin-top: 75px;
+    border-radius: .4rem;
 }

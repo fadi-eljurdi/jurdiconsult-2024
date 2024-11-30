@@ -42,11 +42,7 @@ export default {
                 {
                     text:'Contact',
                     url:'/contact/',
-                },
-                {
-                    text:'Pay Online',
-                    url:'https://buy.stripe.com/6oE4gNd6ffOadUI5kk',
-                },
+                }
             ]
         }
     }

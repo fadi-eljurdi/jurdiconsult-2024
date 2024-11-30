@@ -86,10 +86,20 @@
                 </div>
             </div> -->
             <!-- ◀ ▶  -->
-            <div v-if="!store.spinner" class="d-flex justify-content-center gap-2 mt-3">
-                <button @click="slideBack()" role="button" class="btn btn-sm btn-outline-dark px-4">back</button>
-                <button @click="slideNext()" role="button" class="btn btn-sm btn-outline-dark px-4">next</button>
-            </div>
+
+            <!-- <div class="d-flex justify-content-center mt-3">
+                <div class="btn-group">
+                    <button :disabled="store.spinner" @click="slideBack()" class="btn btn-sm btn-outline-dark px-4">back</button>
+                    <button :disabled="store.spinner" @click="slideNext()" class="btn btn-sm btn-outline-dark px-4">next</button>
+                </div>
+            </div> -->
+            <!-- <div class="d-flex justify-content-center mt-3">
+                <div class="btn-group">
+                    <div  @click="slideBack()" class="btn btn-sm btn-outline-dark">back</div>
+                    <div  @click="slideNext()" class="btn btn-sm btn-outline-dark">next</div>
+                </div>
+            </div> -->
+            
         </div>
     </div>
 </section>

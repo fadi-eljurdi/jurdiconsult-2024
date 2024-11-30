@@ -5,7 +5,6 @@
           <aside class="text-j-light d-flex flex-column gap-3 pt-5">
             <div class="">
               <h5 class="font-title fs-4 text-j-400 w-fit pb-1">{{store.brandname}}</h5>
-              <p class="fs-smaller font-normal text-fade2 pt-2 text-capitalize text-j-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </div>
             <nav class="d-flex flex-column roboto gap-1">
                 <a v-for="node in firstSection" :aria-label="node.text" :href="node.url" class="d-flex align-items-center gap-2">
@@ -18,7 +17,6 @@
           <aside class="text-j-light d-flex flex-column gap-3 pt-5">
             <div class="">
               <h5 class="font-title fs-4 text-j-400 w-fit pb-1">Our Services</h5>
-              <p class="text-j-grey fs-smaller font-normal text-fade2 pt-2 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             
             <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
@@ -37,7 +35,6 @@
           <aside class="text-j-light d-flex flex-column gap-3 pt-5">
             <div class="">
               <h5 class="font-title fs-4 text-j-400 w-fit pb-1">News & Insights</h5>
-              <p class="text-j-grey fs-smaller font-normal text-fade2 pt-2 text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
               <div class="d-flex align-items-center gap-2" v-for="node in new Array(8)">
