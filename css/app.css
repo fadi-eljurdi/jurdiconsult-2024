@@ -486,6 +486,13 @@ figure {
     transform: scale(2.5);
 }
 
+.img-border{
+    border-color: var(--j-400);
+    border-width: .2rem;
+    border-style: solid;
+    padding: .2rem;
+}
+
 /* Newsletter */
 .newsletter-container {
     position: fixed;

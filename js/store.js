@@ -2,7 +2,7 @@ import Page from './classes/Page.js'
 export default {
     version: '1.2',
     brandname:'Jurdi Media Consultants',
-    logo: '/assets/icon.png',
+    logo: '/assets/logo-rbg.png',
     devmode: false,
     OAuthUser: false,
     username: '',
