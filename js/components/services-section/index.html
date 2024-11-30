@@ -99,6 +99,10 @@
                     <div  @click="slideNext()" class="btn btn-sm btn-outline-dark">next</div>
                 </div>
             </div> -->
+            <div v-if="!store.spinner" class="d-flex justify-content-center gap-2 mt-3">
+                <button @click="slideBack()" role="button" class="btn btn-sm btn-outline-dark px-4">back</button>
+                <button @click="slideNext()" role="button" class="btn btn-sm btn-outline-dark px-4">next</button>
+            </div>
             
         </div>
     </div>

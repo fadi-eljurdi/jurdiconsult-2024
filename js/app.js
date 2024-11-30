@@ -92,7 +92,7 @@ const app = Vue.createApp({
 
         setTimeout(() => {
             this.store.togNewsLetter = !this.store.togNewsLetter
-        }, 1000);
+        }, 20000);
 
 
     }
