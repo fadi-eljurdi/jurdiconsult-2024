@@ -5,7 +5,7 @@
                 <div class="founder-header">
                     <div class="founder-avatar" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true">
                         <div class="ratio ratio-1x1" style="width: 120px;">
-                            <img src="/assets/fadi-img.jpg" alt="avatar" class="object-fit-cover rounded-circle img-border">
+                            <img src="/assets/fadi-img.jpg" alt="avatar" class="object-fit-contain rounded-circle img-border">
                         </div>
                     </div>
                 </div>
@@ -42,11 +42,11 @@
                         },
                     }">
                         <swiper-slide v-for="node in getImages">
-                            <div class="d-flex justify-content-center align-items-center bg-j-100 rounded-25" style="height: 150px;">
+                            <div class="d-flex justify-content-center align-items-center rounded-25" style="height: 150px;">
                                 <!-- <div class="ratio ratio-1x1" style="width: 100px;">
                                     <img :src="node" alt="client" class="object-fit-cover rounded-circle">
                                 </div> -->
-                                <img :src="node" alt="client img" class="img-fluid bg-j-100 rounded" width="150">
+                                <img :src="node" alt="client img" class="img-fluid rounded" width="150">
                             </div>
                         </swiper-slide>
                     </swiper-container>

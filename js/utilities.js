@@ -17782,14 +17782,25 @@ function getVismeId(url) {
 }
 
 function validateEmail(email) {
-  // Regular expression to validate email format
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-  // Test the email against the regex
-  return emailRegex.test(email);
+    // Regular expression to validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Test the email against the regex
+    return emailRegex.test(email);
+}
+
+function isValidImg(obj = {}) {
+    // function that takes url of images, checks if the image is valid it returns the url else it return fallback img src
+    return obj.isBrokenImg ? '/assets/img-placeholder.svg' : obj.media
+}
+
+function refreshImg(id, src) {
+    document.getElementById(id).setAttribute('src', src)
 }
 
 export default {
+    refreshImg,
+    isValidImg,
     validateEmail,
     getSymbols,
     copi,

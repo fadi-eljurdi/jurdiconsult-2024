@@ -10,7 +10,7 @@ export default {
     },
     computed: {
         filteredServices() {
-            return this.store.spinner ? new Array(10) : this.store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO')
+            return this.store.spinner ? new Array(8) : this.store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO')
         }
     },
     methods: {

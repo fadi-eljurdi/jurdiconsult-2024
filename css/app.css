@@ -13,8 +13,17 @@
     --j-grey: #8d99ae;
 
     --j-100: #1d4355;
+
     --j-200: #449342;
+    --j-200-30: #7cb37b;
+    --j-200-50: #a2c9a1;
+    --j-200-70: #c7dfc6;
+
     --j-300: #289dd2;
+    --j-300-30: #69bae0;
+    --j-300-50: #94cee9;
+    --j-300-70: #bfe2f2;
+
     --j-400: #41c1ba;
 }
 
@@ -503,10 +512,11 @@ figure {
 }
 
 .chat-message{
-    padding: .8rem;
+    width: fit-content;
+    padding: .6rem;
     border-radius: .8rem;
     border-top-right-radius: 0;
-    background-color: var(--j-300);
+    background-color: var(--j-300-30);
     color: var(--j-light);
 
 }

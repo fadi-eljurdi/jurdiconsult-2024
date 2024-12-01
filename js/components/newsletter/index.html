@@ -21,28 +21,31 @@
         </div>
     </section>
 </section> -->
-<section v-if="store.togNewsLetter" class="newsletter-container d-flex flex-column gap-1">
+<section v-if="store.togNewsLetter" class="newsletter-container d-flex flex-column align-items-end gap-1">
     <aside v-if="!openForm" class="scale-up-tr chat-message">
         <div class="d-flex align-items-center gap-3">
-            <h6>Would you like to subscribe to our newsletter? 📰📝</h6>
+            <h6>Subscribe to our Newsletter! 📰</h6>
         </div>
     </aside>
     <aside v-if="!openForm" class="scale-up-tr chat-message">
         <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-light" @click="openForm = !openForm">Yes please 😊</button>
-            <button class="btn btn-sm btn-outline-light" @click="store.togNewsLetter = !store.togNewsLetter">No thanks 🙃</button>
+            <button class="btn btn-sm btn-light" @click="openForm = !openForm">Yes</button>
+            <button class="btn btn-sm btn-outline-light" @click="store.togNewsLetter = !store.togNewsLetter">No Thanks</button>
         </div>
     </aside>
     <aside v-if="openForm" class="scale-up-tr chat-message">
         <h6>Thats Ammazing!! 😎🚀 Please type your email below ✉️</h6>
     </aside>
-    <aside v-if="openForm" class="scale-up-tr-d1 chat-message py-1">
-        <div class="input-group my-2">
+    <aside v-if="openForm" class="scale-up-tr-d1 chat-message">
+        <div class="input-group">
             <input @keyup.enter="subscribe()" v-model.trim="formInput" name="newsletter email" type="text" class="form-control" placeholder="Enter your email">
             <button :disabled="!isValid() || spinner" @click="subscribe()" class="input-group-text btn text-light bg-j-100">
                 <span v-if="!spinner">Subscribe</span>
                 <div v-else style="width: 68.36px;"><span class="spinner-grow spinner-grow-sm"></span></div>
             </button>
         </div>
+    </aside>
+    <aside role="button" v-if="openForm" class="scale-up-tr chat-message">
+        <span @click="store.togNewsLetter = !store.togNewsLetter">close</span>
     </aside>
 </section>
