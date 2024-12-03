@@ -28,7 +28,7 @@
                     </p>
                 </div>
 
-                <section class="w-100">
+                <!-- <section class="w-100">
                     <div data-aos="zoom-in" data-aos-delay="500" data-aos-once="true" class="font-handwriting text-center fs-3 mb-4 text-j-100">Proud to have served the below companies</div>
                     <swiper-container space-between="20" slides-per-view="2" autoplay-delay="1000"
                         autoplay-disable-on-interaction="true" :breakpoints="{
@@ -47,15 +47,21 @@
                             </div>
                         </swiper-slide>
                     </swiper-container>
-                </section>
-                
-                <!-- <section style="overflow: hidden !important;">
-                    <div class="ticker-box d-flex justify-content-evenly align-items-center gap-3 border">
-                        <div v-for="node in getImages">
-                            <img :src="node" class="img-fluid border" width="120" alt="img">
-                        </div>
-                    </div>
                 </section> -->
+
+                <div class="font-handwriting text-center fs-3 mb-4 text-j-100">Proud to have served the below companies</div>
+
+                <div class="w-100" style="overflow-x: hidden !important;">
+                    <section class="d-flex justify-content-end align-items-center gap-3">
+                        <div class="ticker-item" v-for="node in getImages">
+                            <div class="ratio ratio-1x1 rounded" style="width: 120px;">
+                                <img :src="node" alt="Image" class="object-fit-contain rounded">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                
             </section>
         </div>
     </div>

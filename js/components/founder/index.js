@@ -8,9 +8,9 @@ export default {
             utilities
         }
     },
-    computed:{
-        getImages(){
-            return [
+    computed: {
+        getImages() {
+            let arr = [
                 '/assets/c1.png',
                 '/assets/c2.png',
                 '/assets/c3.png',
@@ -19,15 +19,15 @@ export default {
                 '/assets/c6.png',
                 '/assets/c7.png',
                 '/assets/c8.png',
-                // '/assets/c9.png',
                 '/assets/c10.png',
                 '/assets/c11.png',
                 '/assets/c12.png',
                 '/assets/c13.png',
                 '/assets/c14.png',
                 '/assets/c15.png',
-                // '/assets/c16.png',
             ]
+
+            return [...arr, ...arr, ...arr, ...arr, ...arr]
         }
     }
 }
