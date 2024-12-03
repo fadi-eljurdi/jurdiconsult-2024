@@ -495,11 +495,12 @@ figure {
     transform: scale(2.5);
 }
 
-.img-border{
+.img-border {
     border-color: var(--j-400);
     border-width: .2rem;
     border-style: solid;
     padding: .2rem;
+    background-color: white;
 }
 
 /* Newsletter */
@@ -511,7 +512,7 @@ figure {
     padding: 1rem;
 }
 
-.chat-message{
+.chat-message {
     width: fit-content;
     padding: .6rem;
     border-radius: .8rem;
@@ -522,9 +523,24 @@ figure {
 }
 
 /* HERO section */
-.hero-section{
+.hero-section {
     min-height: 60vh;
     margin: 1rem;
     margin-top: 75px;
     border-radius: .4rem;
+}
+
+span[aria-expanded="true"] {
+    display: none;
+}
+
+.border-tag-start{
+    border-left: 4px solid var(--j-300-30);
+}
+.border-tag-bottom{
+    border-bottom: 4px solid var(--j-300-30);
+}
+
+.rotate-1{
+    transform: rotate(-1deg);
 }
