@@ -174,6 +174,7 @@
     -webkit-animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
 .scale-up-tr-d1 {
     -webkit-animation: scale-up-tr 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: scale-up-tr 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -221,4 +222,112 @@
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
+}
+
+/* Newsticker */
+/* * {
+    box-sizing: border-box;
+}
+
+
+@-webkit-keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+ */
+
+/* @-webkit-keyframes ticker {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+} */
+
+/* 
+.ticker-container {
+    width: 100%;
+    overflow: hidden !important;
+    box-sizing: content-box;
+}
+
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 45s;
+    animation-duration: 45s;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 2rem;
+} */
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-500px, 0, 0);
+    }
+}
+
+.ticker-box {
+    animation: ticker 18s linear infinite;
 }
