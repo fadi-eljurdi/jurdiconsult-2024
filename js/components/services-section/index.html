@@ -1,12 +1,12 @@
 <section class="container-fluid my-5">
-    <div class="row justify-content-center g-3">
+    <div class="row justify-content-center g-2">
         <div class="col-12">
             <section class="d-flex flex-column gap-3 align-items-start">
                 <h1 data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" class="fs-4 font-normal text-j-100 pb-2 border-tag-bottom">Our Services</h1>
             </section>
         </div>
         
-        <div class="col-12 col-md-6 col-lg-3" v-for="node in filteredServices" :key="node">
+        <!-- <div class="col-12 col-md-6 col-lg-3" v-for="node in filteredServices" :key="node">
             <section v-if="store.spinner" class="bg-j-light d-flex align-items-center justify-content-start gap-3 p-2 rounded border">
                 <div class="ratio ratio-1x1" style="width: 80px;">
                     <div class="object-fit-cover skeleton rounded"></div>
@@ -26,6 +26,32 @@
                         
                         <div class="d-flex flex-column gap-2 w-100">
                             <h6 class="text-j-100 text-uppercase font-title">{{node.title}}</h6>
+                            <span class="text-j-300 fs-x-small font-normal d-flex align-items-center gap-2">read more</span>
+                        </div>
+                    </section>
+                </a>
+            </section>
+        </div> -->
+        <div class="col-6 col-lg-3" v-for="node in filteredServices" :key="node">
+            <section v-if="store.spinner" class="bg-j-light d-flex flex-column flex-lg-row align-items-lg-center gap-2 p-2 rounded border">
+                <div class="ratio ratio-1x1" style="width: 70px;">
+                    <div class="object-fit-cover skeleton rounded"></div>
+                </div>
+                <div class="d-flex flex-column gap-2 w-100">
+                    <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                    <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                    <div class="rounded-pill skeleton" style="width: 70%; height: .3rem;"></div>
+                </div>
+            </section>
+            <section class="h-100" v-else>
+                <a :href="node.url">
+                    <section role="button" class="h-100 bg-j-light d-flex flex-column flex-lg-row align-items-lg-center gap-2 p-2 rounded border">
+                        <figure class="ratio ratio-1x1 border" style="width: 70px;">
+                            <img :id="'service-img-' + node.id" loading="lazy" @error="node.isBrokenImg = true" :src="utilities.isValidImg(node)" :alt="'img-'+node.id" class="object-fit-cover rounded">
+                        </figure>
+                        
+                        <div class="d-flex flex-column gap-2 w-100">
+                            <h6 class="text-j-100 text-uppercase font-title text-wrap">{{node.title}}</h6>
                             <span class="text-j-300 fs-x-small font-normal d-flex align-items-center gap-2">read more</span>
                         </div>
                     </section>

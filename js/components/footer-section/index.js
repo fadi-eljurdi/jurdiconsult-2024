@@ -28,16 +28,16 @@ export default {
                     url:'/docs/disclaimer.html',
                 },
                 {
-                    text:'Terms & Conditions',
-                    url:'/docs/terms.html',
-                },
-                {
                     text:'Acceptable Usage',
                     url:'/docs/acceptable-usage.html',
                 },
                 {
                     text:'Cookie Policy',
                     url:'/docs/cookie-policy.html',
+                },
+                {
+                    text:'Terms & Conditions',
+                    url:'/docs/terms.html',
                 },
                 {
                     text:'Contact',
