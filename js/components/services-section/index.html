@@ -45,7 +45,7 @@
             </section>
             <section class="h-100" v-else>
                 <a :href="node.url">
-                    <section role="button" class="h-100 bg-j-light d-flex flex-column justify-content-center flex-lg-row align-items-lg-center gap-2 p-2 rounded border">
+                    <section role="button" class="h-100 bg-j-light d-flex flex-column justify-content-evenly flex-lg-row align-items-lg-center gap-2 p-2 rounded border">
                         <figure class="ratio ratio-1x1" style="width: 70px;">
                             <img :id="'service-img-' + node.id" loading="lazy" @error="node.isBrokenImg = true" :src="utilities.isValidImg(node)" :alt="'img-'+node.id" class="object-fit-cover rounded border">
                         </figure>
