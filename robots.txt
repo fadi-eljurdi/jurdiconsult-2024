@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /editor/
 Allow: /
 
-Sitemap: https://arabiabridlepath.com/sitemap.xml
+Sitemap: https://jurdiconsult.media/sitemap.xml
