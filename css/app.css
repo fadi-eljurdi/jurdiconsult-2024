@@ -85,7 +85,7 @@ a {
 
 .bg-hero {
 
-    background-image: url("/assets/hero.jpg");
+    background-image: url("/assets/hero-lg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
