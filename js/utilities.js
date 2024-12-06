@@ -198,30 +198,6 @@ function removeLiveServerCode(htmlString) {
     return htmlString.replace(pattern, '');
 }
 
-async function githubPush(payload) {
-
-    var data = JSON.stringify({
-        "message": "html file",
-        "content": `${payload.content}`
-    });
-
-    var headers = {
-        'Authorization': `Bearer ${payload.token}`,
-        'Content-Type': 'application/json'
-    };
-
-    var url = `https://api.github.com/repos/mashoun/profile/contents/${payload.filename}`;
-
-    var config = {
-        method: 'PUT',
-        headers: headers,
-        body: data
-    };
-
-    var res = await fetch(url, config);
-    return res
-}
-
 function text64(htmlString) {
     const encoder = new TextEncoder();
     const binaryData = encoder.encode(htmlString);
@@ -17781,7 +17757,27 @@ function getVismeId(url) {
     }
 }
 
+function validateEmail(email) {
+    // Regular expression to validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Test the email against the regex
+    return emailRegex.test(email);
+}
+
+function isValidImg(obj = {}) {
+    // function that takes url of images, checks if the image is valid it returns the url else it return fallback img src
+    return obj.isBrokenImg ? '/assets/img-placeholder.svg' : obj.media
+}
+
+function refreshImg(id, src) {
+    document.getElementById(id).setAttribute('src', src)
+}
+
 export default {
+    refreshImg,
+    isValidImg,
+    validateEmail,
     getSymbols,
     copi,
     getVismeId,
@@ -17799,7 +17795,6 @@ export default {
     extractArticle,
     removeEmptyProperties,
     isValidPayload,
-    githubPush,
     focus,
     deQuote,
     text64,

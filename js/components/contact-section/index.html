@@ -1,64 +1,46 @@
-<section class="p-3">
-    <section class="container-fluid">
-        <div class="row justify-content-center align-items-start g-5">
-            
-            <div class="col-12 col-lg-6">
-                <aside class="d-flex bg-light flex-column gap-2 p-3 shadow-sm rounded">
-                    <input v-model="inputName" type="text" placeholder="Enter your name" class="form-control">
-                    <input v-model="inputSubject" type="text" placeholder="Enter the subject" class="form-control">
-                    <textarea v-model="inputMessage" rows="7" class="form-control" placeholder="Type your message.."></textarea>
-                    <span class="btn-action" @click="sendMessageTo()">Send message</span>
-                    
-                </aside>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="row g-3">
-                    <!-- <div class="col-12">
-                        <div class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <span class="material-symbols-outlined-none fs-1">video_call</span>
-                            <h5 class="font-title fs-5 text-j-dark">Schedule a meeting</h5>
-                            <p class="font-normal text-dark fs-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, reprehenderit.</p>
-                        </div>
-                    </div> -->
-                    <div class="col-12 col-lg-12">
-                        <div class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <!-- <span class="material-symbols-outlined-none fs-1">add_call</span> -->
-                            <i class="bi bi-geo-alt fs-2"></i>
-                            <h5 class="font-title fs-5 text-j-dark">300 International Dr Suite 100, Buffalo NY 14221</h5>
-                            <!-- <p class="font-normal text-dark fs-small">{{store.contact.number}}</p> -->
-                        </div>
+<section class="container my-5" id="contact">
+    <div class="row justify-content-center align-items-start g-5">
+        
+        <div class="col-12 col-lg-6">
+            <aside class="h-100 d-flex bg-light flex-column gap-2 p-3 shadow-sm rounded" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true">
+                <input data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" autocomplete="name" name="username" v-model="inputName" type="text" placeholder="Enter your name" class="form-control">
+                <input data-aos="zoom-in" data-aos-delay="300" data-aos-once="true" name="subject" v-model="inputSubject" type="text" placeholder="Enter the subject" class="form-control">
+                <textarea data-aos="zoom-in" data-aos-delay="400" data-aos-once="true" name="message" v-model="inputMessage" rows="7" class="form-control" placeholder="Type your message.."></textarea>
+                <!-- <span role="button" class="btn-action" @click="sendMessageTo()">Send message</span> -->
+                <a data-aos="zoom-in" data-aos-delay="500" data-aos-once="true" :href="sendMessage" class="btn-action">Send Message</a>
+                
+            </aside>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row g-3">
+                
+                <div class="col-12 col-lg-6" data-aos="zoom-in" data-aos-delay="600" data-aos-once="true">
+                    <a :href="`mailto:${store.contact.email}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope text-j-300" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                        </svg>
+                        <strong v-if="store.spinner" class="font-normal fs-5 text-j-dark">Email</strong>
+                        <strong v-else class="font-normal fs-5 text-j-100">{{store.contact.email}}</strong>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6" data-aos="zoom-in" data-aos-delay="700" data-aos-once="true">
+                    <a :href="`${store.contact.whatsapp}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp text-j-300" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                        </svg>
+                        <strong class="font-normal fs-5 text-j-100">Whatsapp</strong>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-12" data-aos="zoom-in" data-aos-delay="800" data-aos-once="true">
+                    <div class="p-3 bg-light shadow-sm rounded d-flex flex-column align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-geo-alt text-j-300" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                        </svg>
+                        <strong class="font-normal fs-5 text-j-100">300 International Dr Suite 100, Buffalo NY 14221</strong>
                     </div>
-                    <div class="col-12 col-lg-12">
-                        <a :href="`mailto:${store.contact.email}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <span class="material-symbols-outlined-none fs-1">send</span>
-                            <h5 class="font-title fs-5 text-j-dark">{{store.contact.email}}</h5>
-                            <!-- <p class="font-normal text-dark fs-small">{{store.contact.email}}</p> -->
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-12">
-                        <a :href="`${store.contact.whatsapp}`" class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <!-- <span class="material-symbols-outlined-none fs-1">add_call</span> -->
-                            <i class="bi bi-whatsapp fs-2"></i>
-                            <h5 class="font-title fs-5 text-j-dark">Whatsapp</h5>
-                            <!-- <p class="font-normal text-dark fs-small">{{store.contact.number}}</p> -->
-                        </a>
-                    </div>
-                    <!-- <div class="col-12 col-lg-12">
-                        <a href="https://buy.stripe.com/6oE4gNd6ffOadUI5kk" target="_self"class="p-3 bg-light shadow-sm rounded d-flex flex-column gap-2">
-                            <i class="bi bi-credit-card fs-2"></i>
-                            <h5 class="font-title fs-5 text-j-dark">Pay Online</h5>
-                        </a>
-                    </div> -->
                 </div>
             </div>
-            <!-- <div class="col-12 col-lg-6">
-                <aside class="d-flex bg-light flex-column gap-2 p-3 shadow-sm rounded">
-                    <input type="text" placeholder="Enter your name" class="form-control">
-                    <input type="text" placeholder="Enter the subject" class="form-control">
-                    <textarea rows="7" class="form-control" placeholder="Type your message.."></textarea>
-                    <a href="" class="btn-action">Send message</a>
-                </aside>
-            </div> -->
         </div>
-    </section>
+    </div>
 </section>

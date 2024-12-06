@@ -4,5 +4,7 @@ export default class Service {
         for (let prop of keys) {
             this[prop] = payload ? payload[prop] : ''
         }
+
+        this.isBrokenImg = false
     }
 }

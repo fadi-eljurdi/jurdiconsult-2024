@@ -6,23 +6,23 @@ export default {
         return {
             store,
             utilities,
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 10,
-                },
-            },
         }
     },
     computed: {
         filteredServices() {
-            return this.store.spinner ? ['','','','','','','','','',''] : this.store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO')
-            // return this.store.services.filter(s => s.badge != 'DEMO')
-            // return this.store.services
+            return this.store.spinner ? new Array(8) : this.store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO')
         }
+    },
+    methods: {
+        slideNext() {
+            const swiperEl = document.querySelector('#s-swiper');
+            // console.log(swiperEl.swiper);
+            swiperEl.swiper.slideNext();
+        },
+        slideBack() {
+            const swiperEl = document.querySelector('#s-swiper');
+            // console.log(swiperEl.swiper);
+            swiperEl.swiper.slidePrev();
+        },
     }
 }

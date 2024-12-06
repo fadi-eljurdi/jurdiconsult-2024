@@ -6,15 +6,6 @@ export default {
         return {
             store,
             utilities,
-            wallpaper: true
-        }
-    },
-    computed: {
-        location() {
-            return {
-                pathname: location.pathname,
-                href: location.href
-            }
         }
     },
     methods: {
@@ -25,6 +16,9 @@ export default {
             document.getElementById('hero').style.backgroundRepeat = `no-repeat`;
             document.getElementById('hero').style.backgroundSize = `cover`;
             document.getElementById('hero').style.backgroundPosition = `center`;
+        },
+        sharePageUrl(){
+            utilities.shareBy(location.hostname,location.href)
         }
     }
 }

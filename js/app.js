@@ -14,7 +14,30 @@ const app = Vue.createApp({
             store,
             utilities,
             spinner: false,
-            translated: false
+            translated: false,
+            
+            docs:[
+                {
+                    text:'Privacy Policy',
+                    url:'/docs/privacy-policy.html',
+                },
+                {
+                    text:'Disclaimer',
+                    url:'/docs/disclaimer.html',
+                },
+                {
+                    text:'Terms & Conditions',
+                    url:'/docs/terms.html',
+                },
+                {
+                    text:'Acceptable Usage',
+                    url:'/docs/acceptable-usage.html',
+                },
+                {
+                    text:'Cookie Policy',
+                    url:'/docs/cookie-policy.html',
+                }
+            ]
         }
     },
     methods: {
@@ -67,6 +90,10 @@ const app = Vue.createApp({
             }
         }
 
+        setTimeout(() => {
+            this.store.togNewsLetter = !this.store.togNewsLetter
+        }, 20000);
+
 
     }
 })
@@ -96,8 +123,16 @@ app.component('services-banner-section', servicesBannerSection)
 import contactSection from './components/contact-section/index.js'
 app.component('contact-section', contactSection)
 
+import founderSection from './components/founder/index.js'
+app.component('founder-section', founderSection)
+
 import footerSection from './components/footer-section/index.js'
 app.component('footer-section', footerSection)
+
+
+import newsletter from './components/newsletter/index.js'
+app.component('newsletter', newsletter)
+
 
 // BLOGS Components
 import spinner from './components/spinner/index.js'

@@ -12,11 +12,23 @@ export default {
     computed: {
         filteredBlogs() {
             if (this.store.spinner) {
-                return ['', '', '', '', '', '', '', '', '', '']
+                return new Array(12)
             }
 
             if (this.path == '/blogs/') return this.store.blogs.filter(node => node.badge.trim().toUpperCase() != 'DEMO')
             return this.store.blogs.filter(node => node.badge.trim().toUpperCase() != 'DEMO').slice(-8).reverse()
         }
+    },
+    methods: {
+        slideNext() {
+            const swiperEl = document.querySelector('#b-swiper');
+            // console.log(swiperEl.swiper);
+            swiperEl.swiper.slideNext();
+        },
+        slideBack() {
+            const swiperEl = document.querySelector('#b-swiper');
+            // console.log(swiperEl.swiper);
+            swiperEl.swiper.slidePrev();
+        },
     }
 }

@@ -5,7 +5,45 @@ export default {
     data() {
         return {
             store,
-            utilities
+            utilities,
+            firstSection:[
+                {
+                    text:'Home',
+                    url:'/',
+                },
+                {
+                    text:'Services',
+                    url:'/services/',
+                },
+                {
+                    text:'News & Insights',
+                    url:'/blogs/',
+                },
+                {
+                    text:'Privacy Policy',
+                    url:'/docs/privacy-policy.html',
+                },
+                {
+                    text:'Disclaimer',
+                    url:'/docs/disclaimer.html',
+                },
+                {
+                    text:'Acceptable Usage',
+                    url:'/docs/acceptable-usage.html',
+                },
+                {
+                    text:'Cookie Policy',
+                    url:'/docs/cookie-policy.html',
+                },
+                {
+                    text:'Terms & Conditions',
+                    url:'/docs/terms.html',
+                },
+                {
+                    text:'Contact',
+                    url:'/contact/',
+                }
+            ]
         }
     }
 }

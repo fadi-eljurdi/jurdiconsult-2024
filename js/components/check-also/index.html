@@ -1,25 +1,27 @@
 <section class="d-flex flex-column gap-3">
-    <aside class="p-2 bg-light rounded shadow-sm d-flex flex-column gap-3" v-if="[...canvaLinks,...googleFiles,...googleFormsLinks, ...vismeLinks].length != 0">
-        <h5 class="fs-6 text-primary-200 font-title d-flex align-items-center gap-2">
-            
+    <aside class="p-2 bg-light rounded shadow-sm d-flex flex-column gap-3"
+        v-if="[...canvaLinks,...googleFiles,...googleFormsLinks, ...vismeLinks].length != 0">
+        <h5 class="fs-5 text-j-100 font-normal d-flex align-items-center gap-2">
             <span>Attachments</span>
-            <span class="material-symbols-outlined fs-5">attachment</span>
         </h5>
-        
+
         <section class="d-flex flex-column gap-1">
             <!-- Visme -->
             <figure v-for="node in vismeLinks">
                 <div class="ratio ratio-4x3">
-                    <iframe class="rounded visme object-fit-contain" :src="'https://my.visme.co/_embed/'+node+'?responsive=1'" :data-projectid="node" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe class="rounded visme object-fit-contain"
+                        :src="'https://my.visme.co/_embed/'+node+'?responsive=1'" :data-projectid="node" frameborder="0"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </div>
             </figure>
         </section>
-        
+
         <section class="d-flex flex-column gap-1">
             <!-- Canva -->
             <figure v-for="node in canvaLinks">
                 <div class="ratio ratio-4x3">
-                    <iframe class="rounded" :src="'https://www.canva.com/design/'+node+'/view?embed'" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe class="rounded" :src="'https://www.canva.com/design/'+node+'/view?embed'" frameborder="0"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </div>
             </figure>
         </section>
@@ -28,17 +30,19 @@
             <!-- Google Doc + Sheets + Slides + Media Files -->
             <figure v-for="node in googleFiles">
                 <div class="ratio ratio-4x3">
-                    <iframe class="rounded" :src="'https://drive.google.com/file/d/'+node+'/preview'" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe class="rounded" :src="'https://drive.google.com/file/d/'+node+'/preview'" frameborder="0"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </div>
             </figure>
         </section>
 
-        
+
         <section class="d-flex flex-column gap-1">
             <!-- Google Forms -->
             <figure v-for="node in googleFormsLinks">
                 <div class="ratio ratio-1x1">
-                    <iframe class="rounded" :src="'https://docs.google.com/forms/d/e/'+node+'/viewform?embedded=true'" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe class="rounded" :src="'https://docs.google.com/forms/d/e/'+node+'/viewform?embedded=true'"
+                        frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </figure>
         </section>
@@ -46,26 +50,52 @@
     </aside>
 
     <aside class="p-2 bg-light rounded shadow-sm d-flex flex-column gap-3">
-        <h5 class="fs-6 text-primary-200 font-title d-flex align-items-center gap-2">
-            
-            <!-- <span class="material-symbols-outlined fs-5">link</span> -->
+        <h5 class="fs-5 text-j-100 font-normal d-flex align-items-center gap-2">
             <span>Check also</span>
         </h5>
         <div v-if="store.spinner" class="d-flex flex-column gap-2">
             <div v-for="node in ['','','','','','','','','','','','','']" class="d-flex align-items-center gap-2">
-                <span class="material-symbols-outlined fs-6 text-primary-150">feed</span>
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-layout-text-window text-j-200" viewBox="0 0 16 16">
+                        <path
+                            d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" />
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1zm1 3v10a1 1 0 0 1-1 1h-2V4zm-4 0v11H2a1 1 0 0 1-1-1V4z" />
+                    </svg>
+                </div>
                 <div class="skeleton rounded-pill" style="width: 25%; height: .7rem;"></div>
                 <div class="skeleton rounded-pill" style="width: 75%; height: .7rem;"></div>
             </div>
         </div>
         <div v-else class="d-flex flex-column gap-2">
-            <a :href="node.url" :aria-label="node.title" class="d-flex gap-1 align-items-center" v-for="node in store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO').slice(-8).reverse()" :key="node.id">
-                <span class="material-symbols-outlined fs-6 text-primary-150">feed</span>
-                <span class="text-secondary fs-small text-fade">services / {{node.title}}</span>
+            <a :href="node.url" :aria-label="node.title" class="d-flex gap-1 align-items-center"
+                v-for="node in store.services.filter(node => node.badge.trim().toUpperCase() != 'DEMO').slice(-8).reverse()"
+                :key="node.id">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-layout-text-window text-j-200" viewBox="0 0 16 16">
+                        <path
+                            d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" />
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1zm1 3v10a1 1 0 0 1-1 1h-2V4zm-4 0v11H2a1 1 0 0 1-1-1V4z" />
+                    </svg>
+                </div>
+                <span class="text-secondary fs-small text-fade"><b>Services</b> / {{node.title}}</span>
             </a>
-            <a :href="node.url" :aria-label="node.title" class="d-flex gap-1 align-items-center" v-for="node in store.blogs.filter(node => node.badge.trim().toUpperCase() != 'DEMO').slice(-8).reverse()" :key="node.id">
-                <span class="material-symbols-outlined fs-6 text-primary-150">feed</span>
-                <span class="text-secondary fs-small text-fade">blogs / {{node.title}}</span>
+            <a :href="node.url" :aria-label="node.title" class="d-flex gap-1 align-items-center"
+                v-for="node in store.blogs.filter(node => node.badge.trim().toUpperCase() != 'DEMO').slice(-8).reverse()"
+                :key="node.id">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-layout-text-window text-j-200" viewBox="0 0 16 16">
+                        <path
+                            d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" />
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1zm1 3v10a1 1 0 0 1-1 1h-2V4zm-4 0v11H2a1 1 0 0 1-1-1V4z" />
+                    </svg>
+                </div>
+                <span class="text-secondary fs-small text-fade"><b>Blogs</b> / {{node.title}}</span>
             </a>
         </div>
     </aside>

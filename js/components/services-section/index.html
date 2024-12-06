@@ -1,71 +1,36 @@
-<section class="p-3" style="overflow-x: hidden !important;">
-    <div class="container-fluid">
-        <div class="row justify-content-between g-3">
-            <div class="col-12">
-                <div class="d-flex flex-column gap-2">
-                    <h4 data-aos="zoom-in-right" data-aos-duration="1000" class="fs-4 font-title">Our Services</h4>
-                    <div class="d-flex flex-wrap align-items-center gap-1 font-normal">
-                        <!-- <div v-for="tag in filteredServices" class="d-flex align-items-center gap-2 px-2 bg-light bg-j-primary-hover border fs-x-small rounded fw-bold text-j-dark text-lowercase">#{{tag.title}}</div> -->
-                        <div v-for="tag in ['media_production','gameing_consultancy','Film_making','Content_Creation','Production_Management','Middle_East','script_assessment','script_localizing','title_search']" class="d-flex align-items-center gap-2 px-2 bg-light bg-j-primary-hover border fs-x-small rounded fw-bold text-j-dark text-lowercase">#{{tag}}</div>
-                    </div>
-                    <!-- <p class="fs-small">We offer focused media consultancy within specific areas to elevate your business strategy in the MENAT region. For broadcasters, we provide guidance on audience segmentation, format development, optimising content scheduling, and navigating rights acquisition. Production houses benefit from our expertise in advising on talent management, budgeting, location scouting with regional insight, and streamlining post-production workflows. We advise ad agencies on crafting campaigns tailored to MENAT audiences, provide media buying insights, and support performance analysis and optimization. For gaming companies,  our specialised consulting covers artwork and game design, cultural sensitivity assessment, monetization strategies and strategies for influencer marketing and community engagement.</p> -->
+<section class="container-fluid my-5">
+    <div class="row justify-content-center g-2">
+        <div class="col-12">
+            <section class="d-flex flex-column gap-3 align-items-start">
+                <h1 data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" class="fs-4 font-normal text-j-100 pb-2 border-tag-bottom">Our Services</h1>
+            </section>
+        </div>
+        
+        <div class="col-6 col-lg-3" v-for="node in filteredServices" :key="node">
+            <section v-if="store.spinner" class="bg-j-light d-flex flex-column flex-lg-row align-items-lg-center gap-2 p-2 rounded border">
+                <div class="ratio ratio-1x1" style="width: 70px;">
+                    <div class="object-fit-cover skeleton rounded"></div>
                 </div>
-            </div>
-            
-            <div class="col-12" data-aos="fade-left" data-aos-duration="1500">
-                <swiper-container v-if="store.spinner" :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                    },
-                }">
-                    <swiper-slide v-for="node in filteredServices" :key="node">
-                        <section class="bg-light d-flex flex-column gap-4 p-3 py-4 rounded-15 border">
-
-                            <div class="rounded-pill skeleton" style="width: 50%; height: .8rem;"></div>
-                            
-                            <div class="d-flex flex-column align-items-start gap-2 w-100">
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
-                                <div class="rounded-pill skeleton" style="width: 70%; height: .3rem;"></div>
-                            </div>
-                            
-                            <div class="rounded-pill skeleton" style="width: 25%; height: .4rem;"></div>
-                        </section>
+                <div class="d-flex flex-column gap-2 w-100">
+                    <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                    <div class="rounded-pill skeleton" style="width: 100%; height: .3rem;"></div>
+                    <div class="rounded-pill skeleton" style="width: 70%; height: .3rem;"></div>
+                </div>
+            </section>
+            <section class="h-100" v-else>
+                <a :href="node.url" :aria-label="node.title">
+                    <section class="h-100 bg-j-light d-flex flex-column justify-content-evenly flex-lg-row align-items-lg-center gap-2 p-2 rounded border">
+                        <figure class="ratio ratio-1x1" style="width: 70px;">
+                            <img :id="'service-img-' + node.id" loading="lazy" @error="node.isBrokenImg = true" :src="utilities.isValidImg(node)" :alt="'img-'+node.id" class="object-fit-cover rounded border">
+                        </figure>
                         
-                    </swiper-slide>
-                </swiper-container>
-                <swiper-container v-else :pagination="{clickable:true}" :spaceBetween="10" :breakpoints="{
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                    },
-                }">
-                    <swiper-slide v-for="node in filteredServices" :key="node">
-                        
-                        <section class="bg-light d-flex flex-column gap-1 p-3 rounded-15 border">
-                            <!-- <span class="material-symbols-outlined fs-1 text-j-primary">verified</span> -->
-                            <figure class="ratio ratio-1x1" style="width: 50px;">
-                                <img :src="node.media" alt="pic" class="object0fit-cover rounded">
-                            </figure>
-                            <a :href="node.url" ><strong  style="height: 55px" class="font-title text-fade-2 text-j-dark fs-6 text-uppercase py-2">{{node.title}}</strong></a>
-                            <p   style="height: 40px" class="font-normal text-j-dark text-fade-2 fs-small text-justify">{{node.description}}</p>
-                            <a :aria-label="node.title" :href="node.url" class="text-j-primary fs-x-small font-normal d-flex align-items-center gap-2">show more <i class="m-0 bi bi-arrow-right"></i></a>
-                        </section>
-                    </swiper-slide>
-                </swiper-container>
-            </div>
+                        <div class="d-flex flex-column gap-2 w-100">
+                            <strong class="text-j-100 text-uppercase font-title text-wrap">{{node.title}}</strong>
+                            <strong class="text-j-300 fs-x-small font-normal d-flex align-items-center gap-2">read more</strong>
+                        </div>
+                    </section>
+                </a>
+            </section>
         </div>
     </div>
 </section>
