@@ -4,7 +4,7 @@
         <div class="col-12 col-lg-4">
           <aside class="text-j-light d-flex flex-column gap-3 pt-5">
             <div class="">
-              <h5 class="font-title fs-4 text-j-light w-fit pb-1 border-tag-bottom">Website Content</h5>
+              <strong class="font-title fs-4 text-j-light w-fit pb-1 border-tag-bottom">Website Content</strong>
             </div>
             <nav class="d-flex flex-column roboto gap-1">
                 <a v-for="node in firstSection" :aria-label="node.text" :href="node.url" class="d-flex align-items-center gap-2">
@@ -16,7 +16,7 @@
         <div class="col-12 col-lg-4">
           <aside class="text-j-light d-flex flex-column gap-3 pt-5">
             <div class="">
-              <h5 class="font-title fs-4 text-j-light w-fit pb-1 border-tag-bottom">Our Services</h5>
+              <strong class="font-title fs-4 text-j-light w-fit pb-1 border-tag-bottom">Our Services</strong>
             </div>
             
             <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
@@ -34,7 +34,7 @@
         <div class="col-12 col-lg-4">
           <aside class="text-j-light d-flex flex-column gap-3 pt-5">
             <div class="">
-              <h5 class="font-title fs-4 text-j-light w-fit pb-1 border-tag-bottom">News & Insights</h5>
+              <strong class="font-title fs-4 text-j-light w-fit pb-1 border-tag-bottom">News & Insights</strong>
             </div>
             <nav v-if="store.spinner" class="d-flex flex-column roboto gap-2">
               <div class="d-flex align-items-center gap-2" v-for="node in new Array(8)">
@@ -52,7 +52,7 @@
       <hr class="container-fluid my-4 text-j-light">
       <div class="row g-3 justify-content-between pb-3">
         <div class="col-12 col-md-6 col-lg-4">
-          <h5 class="text-j-light font-title text-center text-md-start">Connect with us</h5>
+          <strong class="text-j-light font-title text-center text-md-start">Connect with us</strong>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
           <nav v-if="store.spinner" class="d-flex gap-3 justify-content-center justify-content-md-end text-j-grey fs-5">

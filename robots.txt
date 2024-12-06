@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /editor/
 Allow: /
-
-Sitemap: https://jurdiconsult.media/sitemap.xml
