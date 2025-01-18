@@ -1,6 +1,6 @@
 import Page from './classes/Page.js'
 export default {
-    version: '1.2',
+    version: '1.3',
     brandname:'Jurdi Media Production Consultants',
     logo: '/assets/logo-rbg.png',
     devmode: false,
