@@ -76,7 +76,8 @@
                             
                             <th scope="row" style="width: 50px;">
                                 <div class="d-flex gap-2" v-if="!spinner">
-                                    <span class="material-symbols-outlined text-secondary" data-bs-toggle="dropdown" role="button" aria-label="options">more_horiz</span>
+                                    <svg data-bs-toggle="dropdown" role="button" aria-label="options" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                    <!-- <span class="material-symbols-outlined text-secondary" data-bs-toggle="dropdown" role="button" aria-label="options">more_horiz</span> -->
                                     <ul class="dropdown-menu fs-small">
                                         <li class="dropdown-item" role="button" title="Copy URL" @click="copyUrl(page.url)">Copy URL</li>
                                         <li class="dropdown-item" role="button"><router-link :to="`/update-page/${page.folder}/${page.id}`">Update this page</router-link></li>

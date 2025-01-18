@@ -61,18 +61,22 @@
                                     <div class="d-flex flex-column gap-3 mt-3">
                                         <div  v-if="filteredLinks.length > 0 && updatedPage.links.trim() != ''" class="d-flex align-items-center flex-wrap gap-1">
                                             <div v-for="node in filteredLinks" class="d-flex align-items-center gap-1 px-2 fs-x-small border rounded-pill">
-                                                <span class="material-symbols-outlined fs-6">attachment</span>
+                                                <!-- <span class="material-symbols-outlined fs-6">attachment</span> -->
+                                                 
+                                                <i class="bi bi-paperclip"></i>
                                                 <span class="text-break">{{node}}</span>
                                             </div>
                                         </div>
                                         <div class="input-group">
                                             <span class="input-group-text position-relative">
                                                 <!-- <i class="bi bi-link"></i> -->
-                                                <span class="material-symbols-outlined fs-6">attachment</span>
+                                                <!-- <span class="material-symbols-outlined fs-6">attachment</span> -->
+                                                 
+                                                <i class="bi bi-paperclip"></i>
                                                 <span v-if="filteredLinks.length > 0 && updatedPage.links.trim() != ''" class="badge bg-primary fs-xx-small position-absolute top-0 start-100 translate-middle badge rounded-pill z-1 sans">{{filteredLinks.length}}</span>
                                             </span>
                                             <textarea rows="3" style="outline: none !important;" v-model="updatedPage.links" type="text" placeholder="Attachments: Youtube, Google Drive, Canva URL (separated by comma ,)" class="form-control"></textarea>
-                                            <span role="button" data-bs-toggle="modal" data-bs-target="#mediaLinksInfo" class="input-group-text"><span class="material-symbols-outlined">info</span></span>
+                                            <span role="button" data-bs-toggle="modal" data-bs-target="#mediaLinksInfo" class="input-group-text"><i class="bi bi-info-circle"></i></span>
                                             <!-- Modal -->
                                             <div class="modal modal-xl fade" id="mediaLinksInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-scrollable">
