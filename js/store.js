@@ -11,6 +11,7 @@ export default {
     geminiToken: '',
     // api: 'https://script.google.com/macros/s/AKfycbxlMGOU2_dHfCMz3ArjHlA-OaYXXxQw_Hasj1gQJWv-dAD7eo5ZZpilgpl-ypwK_PC-/exec',
     api:'https://script.google.com/macros/s/AKfycbywZNgKV_Mp7SKrkfA2oOIvt26cq0V3u2kLeQcBlOCAXIlRFgLAOZyhBOeN5TdRaRky/exec',
+    // api:'https://script.google.com/macros/s/AKfycbzH-dJTcBM95CFA54XjWVuXROmhFfyvdPaWHrMqFvox223Wy_ivM7tGXMGEeSylkrma/exec',
 
     spinner: false,
     services: [],
