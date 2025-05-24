@@ -6,10 +6,11 @@ export default {
     return {
       store,
       utilities,
+      inputEmail: "",
       inputName: "",
       inputSubject: "",
       inputMessage: "",
-      api: "https://script.google.com/macros/s/AKfycbwi-fV8vXn4TTdRrLf58vwJlkHCwYme-FB61H-1zOrq4faKfywyxRJxduOC2Nanh8s6/exec",
+      api: "https://script.google.com/macros/s/AKfycby0sPCTGk0W4QZhO5njp0THu2o0TR-FE8mCIV1DKQVmaaQmFis_Gn9Oa2pRnWci5l0b/exec",
     };
   },
   computed: {
@@ -25,6 +26,7 @@ export default {
         name: this.inputName,
         subject: this.inputSubject,
         message: this.inputMessage,
+        email: this.inputEmail,
       };
       fetch(this.api, {
         method: "POST",
@@ -39,8 +41,27 @@ export default {
     },
     sendMessageTo() {
       //   location.href = this.sendMessage;
+      const isValidEmail = (email) => {
+        // Regular expression for email validation
+        // This regex is a common pattern for validating email addresses.
+        // It checks for:
+        // - Characters before the '@' symbol (local part): letters, numbers,
+        //   and some special characters like ._%+-
+        // - An '@' symbol
+        // - Characters after the '@' symbol (domain part): letters, numbers,
+        //   and hyphens, followed by a dot '.' and then 2 or more letters
+        //   for the top-level domain (e.g., .com, .org)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (this.inputName !== "" && this.inputSubject !== "" && this.inputMessage !== "") {
+        // Test the email against the regex
+        return emailRegex.test(email);
+      };
+      if (!isValidEmail(this.inputEmail)) {
+        alert("Invalid email format");
+        return null;
+      }
+
+      if (this.inputName !== "" && this.inputSubject !== "" && this.inputMessage !== "" && this.inputEmail !== "") {
         this.sendMessage();
       } else alert("please fill out all the required fields to send a message.");
     },
