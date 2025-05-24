@@ -39,7 +39,10 @@ export default {
     },
     sendMessageTo() {
       //   location.href = this.sendMessage;
-      this.sendMessage();
+
+      if (this.inputName !== "" && this.inputSubject !== "" && this.inputMessage !== "") {
+        this.sendMessage();
+      } else alert("please fill out all the required fields to send a message.");
     },
   },
 };

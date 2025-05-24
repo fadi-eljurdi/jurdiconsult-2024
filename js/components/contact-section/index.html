@@ -3,9 +3,9 @@
         
         <div class="col-12 col-lg-6">
             <aside class="h-100 d-flex bg-light flex-column gap-2 p-3 shadow-sm rounded" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true">
-                <input data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" autocomplete="name" name="username" v-model="inputName" type="text" placeholder="Enter your name" class="form-control">
-                <input data-aos="zoom-in" data-aos-delay="300" data-aos-once="true" name="subject" v-model="inputSubject" type="text" placeholder="Enter the subject" class="form-control">
-                <textarea data-aos="zoom-in" data-aos-delay="400" data-aos-once="true" name="message" v-model="inputMessage" rows="7" class="form-control" placeholder="Type your message.."></textarea>
+                <input data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" autocomplete="name" name="username" v-model.trim="inputName" type="text" placeholder="Enter your name" class="form-control">
+                <input data-aos="zoom-in" data-aos-delay="300" data-aos-once="true" name="subject" v-model.trim="inputSubject" type="text" placeholder="Enter the subject" class="form-control">
+                <textarea data-aos="zoom-in" data-aos-delay="400" data-aos-once="true" name="message" v-model.trim="inputMessage" rows="7" class="form-control" placeholder="Type your message.."></textarea>
                 <span role="button" class="btn-action" @click="sendMessageTo()">Send message</span>
                 <!-- <a data-aos="zoom-in" data-aos-delay="500" data-aos-once="true" :href="sendMessage" class="btn-action">Send Message</a> -->
                 
