@@ -38,6 +38,12 @@ body {
     background-color: var(--j-light);
 }
 
+.link{
+    color: var(--j-300);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 h1,
 h2,
 h3,
